@@ -16,6 +16,24 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url("./fonts/Montserrat-Regular.eot");
+  src: url("./fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("./fonts/Montserrat-Regular.woff2") format("woff2"), url("./fonts/Montserrat-Regular.woff") format("woff"), url("./fonts/Montserrat-Regular.ttf") format("truetype"), url("./fonts/Montserrat-Regular.svg#Montserrat-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("./fonts/Montserrat-Bold.eot");
+  src: url("./fonts/Montserrat-Bold.eot?#iefix") format("embedded-opentype"), url("./fonts/Montserrat-Bold.woff2") format("woff2"), url("./fonts/Montserrat-Bold.woff") format("woff"), url("./fonts/Montserrat-Bold.ttf") format("truetype"), url("./fonts/Montserrat-Bold.svg#Montserrat-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 /************************
 GLOBALS
 ************************/
@@ -129,65 +147,6 @@ INTRO
   text-shadow: 0px 0px 4px #000000;
 }
 
-.container .subtitle {
-  font-family: 'Bomber Balloon';
-  font-size: 38px;
-  line-height: 45px;
-  text-shadow: 0px 0px 4px #000000;
-  position: absolute;
-  width: calc(100% - 32px);
-  top: 25%;
-  text-align: center;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-@media screen and (min-width: 600px) {
-  .container .subtitle {
-    font-size: 70px;
-    line-height: 80px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .container .subtitle {
-    font-size: 60px;
-    line-height: 100px;
-    letter-spacing: -1px;
-    width: calc(100% - 64px);
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .container .subtitle {
-    font-size: 95px;
-  }
-}
-
-.container .subtitle span {
-  position: relative;
-  display: inline-block;
-  opacity: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -webkit-transition: all 1s cubic-bezier(0.12, 0.43, 0.4, 1);
-  transition: all 1s cubic-bezier(0.12, 0.43, 0.4, 1);
-}
-
-.container .subtitle span:nth-child(odd) {
-  color: #66aadd;
-}
-
-.container .subtitle span:nth-child(even) {
-  color: #ffdd00;
-}
-
-.container .subtitle span.-reveal {
-  opacity: 1;
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
-}
-
 .content {
   position: absolute;
   width: 100%;
@@ -261,6 +220,59 @@ INTRO
           animation: arrowbounce 1.5s infinite;
 }
 
+.replay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 6px 12px;
+  display: none;
+  cursor: pointer;
+}
+
+.replay:hover span {
+  color: #000000;
+}
+
+.replay:hover svg path {
+  fill: #000000;
+}
+
+.replay.-animEnded {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.replay span {
+  font-family: 'Montserrat';
+  font-style: 13px;
+  color: #FFFFFF;
+  display: inline-block;
+  margin-right: 8px;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
+.replay svg {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+.replay svg path {
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
 /************************
 SECTION - 
 ************************/
@@ -269,7 +281,13 @@ section {
 }
 
 .left {
-  width: 70%;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .left {
+    width: 70%;
+  }
 }
 
 /************************
@@ -294,12 +312,27 @@ SECTION - SECOND
   pointer-events: none;
 }
 
+.second::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #C16039;
+  background: -webkit-gradient(linear, left bottom, left top, from(#000000), color-stop(30%, #FFFFFF00));
+  background: linear-gradient(0deg, #000000 0%, #FFFFFF00 30%);
+  pointer-events: none;
+}
+
 .second .container {
   padding-top: 80px;
   padding-bottom: 80px;
 }
 
 .second h2 {
+  font-family: 'Montserrat';
+  font-weight: 700;
   color: #FFFFFF;
   font-size: 20px;
   margin-bottom: 40px;
@@ -330,6 +363,229 @@ SECTION - SECOND
 }
 
 /************************
+SECTION - THIRD
+************************/
+.third, .fifth {
+  position: relative;
+  padding: 300px 0;
+  background: url("./img/pixel-heart.png") center repeat;
+  height: 100vh;
+}
+
+.third::before, .fifth::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #f8aeae;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f8aeae), color-stop(20%, #FFFFFF00));
+  background: linear-gradient(180deg, #f8aeae 0%, #FFFFFF00 20%);
+  pointer-events: none;
+}
+
+.third::after, .fifth::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #f8aeae;
+  background: -webkit-gradient(linear, left bottom, left top, from(#f8aeae), color-stop(20%, #FFFFFF00));
+  background: linear-gradient(0deg, #f8aeae 0%, #FFFFFF00 20%);
+  pointer-events: none;
+}
+
+.third .container, .fifth .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.third .left, .fifth .left {
+  text-align: center;
+}
+
+.third .left h2, .fifth .left h2 {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .third .left h2, .fifth .left h2 {
+    font-size: 64px;
+  }
+}
+
+.third .left .buttons span, .third .left .buttons a, .fifth .left .buttons span, .fifth .left .buttons a {
+  font-family: 'Montserrat';
+  font-size: 20px;
+  display: inline-block;
+  background: #FFFFFF;
+  padding: 12px 24px;
+  border: 2px solid #000000;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.third .left .buttons span:hover, .third .left .buttons a:hover, .fifth .left .buttons span:hover, .fifth .left .buttons a:hover {
+  background: #000000;
+  color: #FFFFFF;
+}
+
+.third .left .buttons span, .fifth .left .buttons span {
+  margin-right: 12px;
+}
+
+/************************
+SECTION - FORTH
+************************/
+.forth {
+  position: relative;
+  padding: 300px 0;
+  background: url("./img/repeated-square.png") center repeat;
+}
+
+.forth h2 {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  color: #000000;
+  font-size: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .forth h2 {
+    font-size: 40px;
+    margin-bottom: 60px;
+  }
+}
+
+/************************
+SECTION - FIFTH
+************************/
+.fifth {
+  background: url("./img/watercolor.png") center repeat;
+}
+
+.fifth::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #d7c8a6;
+  background: -webkit-gradient(linear, left top, left bottom, from(#d7c8a6), color-stop(20%, #FFFFFF00));
+  background: linear-gradient(180deg, #d7c8a6 0%, #FFFFFF00 20%);
+  pointer-events: none;
+}
+
+.fifth::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #d7c8a6;
+  background: -webkit-gradient(linear, left bottom, left top, from(#d7c8a6), color-stop(20%, #FFFFFF00));
+  background: linear-gradient(0deg, #d7c8a6 0%, #FFFFFF00 20%);
+  pointer-events: none;
+}
+
+/************************
+SECTION - SIXTH
+************************/
+.sixth {
+  position: relative;
+  padding: 300px 0;
+  background: url("./img/dot-grid.png") center repeat;
+}
+
+.sixth::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #C16039;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), color-stop(20%, #FFFFFF00));
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF00 20%);
+  pointer-events: none;
+}
+
+.sixth h2 {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  color: #000000;
+  font-size: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .sixth h2 {
+    font-size: 40px;
+    margin-bottom: 60px;
+  }
+}
+
+.sixth .grid-item,
+.sixth .grid-sizer {
+  width: calc(50% - 24px);
+  margin-bottom: 48px;
+}
+
+@media screen and (min-width: 768px) {
+  .sixth .grid-item,
+  .sixth .grid-sizer {
+    /* 5 columns for larger screens */
+    width: calc(33% - 20px);
+    margin-bottom: 40px;
+  }
+}
+
+.sixth .sixth__solo {
+  background: #FFFFFF;
+  padding: 16px;
+  border-radius: 20px;
+  border: 1px solid #777777;
+}
+
+.sixth .sixth__solo .sixth__text {
+  font-family: 'Montserrat';
+  font-size: 15px;
+  text-align: left;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.sixth .sixth__solo .sixth__author {
+  font-family: 'Montserrat';
+  font-size: 13px;
+  font-style: italic;
+  color: #888888;
+  text-align: right;
+  display: block;
+}
+
+/************************
 LAYERS
 ************************/
 .twitch__chat {
@@ -338,19 +594,91 @@ LAYERS
 
 @media screen and (min-width: 1024px) {
   .twitch__chat {
-    display: block;
     position: fixed;
     width: 350px;
     top: 50%;
-    right: 0;
+    right: -100%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    z-index: 100px;
+  }
+  .twitch__chat.-showTwitch {
+    right: 0;
   }
 }
 
 .twitch__chat iframe {
   width: 100%;
   height: 70vh;
+}
+
+.layer__motiv {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 0.14s ease-in-out;
+  transition: all 0.14s ease-in-out;
+}
+
+.layer__motiv.-showLayer {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.layer__motiv.layer__motivtwo .container img {
+  height: 60vh;
+  width: auto;
+  margin: 0 auto;
+}
+
+.layer__motiv .container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.layer__motiv .container .layer__close {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 70px;
+  right: 70px;
+  border-radius: 100%;
+  background: #000000;
+  border: 1px solid #FFFFFF;
+  background: url("./img/icon_close.svg") no-repeat center;
+  background-size: 30%;
+  cursor: pointer;
+}
+
+.layer__motiv .container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.layer__motiv .container img.jebaited {
+  width: 160px;
+  height: auto;
+  display: inline-block;
+  margin-bottom: 20px;
 }
 
 /************************

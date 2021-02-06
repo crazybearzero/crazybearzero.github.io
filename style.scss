@@ -1,5 +1,6 @@
 $white: #FFFFFF;
 $black: #000000;
+$black-40: rgba(0,0,0,0.4);
 $blue: #66aadd;
 $yellow: #ffdd00;
 $dayDuration: 2s;
@@ -34,6 +35,31 @@ $rocks2Duration: 240s;
 	font-display: swap;
 }
 
+@font-face {
+	font-family: 'Montserrat';
+	src: url('./fonts/Montserrat-Regular.eot');
+	src: url('./fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+			url('./fonts/Montserrat-Regular.woff2') format('woff2'),
+			url('./fonts/Montserrat-Regular.woff') format('woff'),
+			url('./fonts/Montserrat-Regular.ttf') format('truetype'),
+			url('./fonts/Montserrat-Regular.svg#Montserrat-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('./fonts/Montserrat-Bold.eot');
+	src: url('./fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+			url('./fonts/Montserrat-Bold.woff2') format('woff2'),
+			url('./fonts/Montserrat-Bold.woff') format('woff'),
+			url('./fonts/Montserrat-Bold.ttf') format('truetype'),
+			url('./fonts/Montserrat-Bold.svg#Montserrat-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
 
 /************************
 GLOBALS
@@ -133,53 +159,6 @@ INTRO
 		}
 	}
 
-	.subtitle {
-		font-family: 'Bomber Balloon';
-		font-size: 38px;
-		line-height: 45px;
-		text-shadow: 0px 0px 4px #000000;
-		position: absolute;
-		width: calc(100% - 32px);
-		top: 25%;
-		text-align: center;
-		transform: translateY(-50%);
-		
-		@media screen and (min-width:600px) {
-			font-size: 70px;
-			line-height: 80px;
-		}
-		@media screen and (min-width:768px) {
-			font-size: 60px;
-			line-height: 100px;
-			letter-spacing: -1px;
-			width: calc(100% - 64px);
-		}
-
-		@media screen and (min-width:1024px) {
-			font-size: 95px;
-		}
-
-		span {
-			position: relative;
-			display: inline-block;
-			opacity: 0;
-			transform: translateY(-50%);
-			transition: all 1s cubic-bezier(0.12, 0.43, 0.4, 1);
-
-			&:nth-child(odd) {
-				color: $blue;
-			}
-
-			&:nth-child(even) {
-				color: $yellow;
-			}
-
-			&.-reveal{
-				opacity: 1;
-				transform: translateY(0%);
-			}
-		}
-	}
 }
 
 .content {
@@ -249,6 +228,54 @@ INTRO
 	}
 }
 
+.replay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 5;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	padding: 6px 12px;
+	display: none;
+	cursor: pointer;
+
+	&:hover {
+		span {
+			color: $black;
+		}
+
+		svg {
+			path {
+				fill: $black;
+			}
+		}
+	}
+
+	&.-animEnded {
+		display: flex;
+	}
+
+	span {
+		font-family: 'Montserrat';
+		font-style: 13px;
+		color: $white;
+		display: inline-block;
+		margin-right: 8px;
+		transition: all 0.15s ease-in-out;
+	}
+
+	svg {
+		width: 20px;
+		height: 20px;
+		display: inline-block;
+
+		path {
+			transition: all 0.15s ease-in-out;
+		}
+	}
+}
+
 
 /************************
 SECTION - 
@@ -258,7 +285,11 @@ section {
 }
 
 .left {
-	width: 70%;
+	width: 100%;
+	
+	@media screen and (min-width:1024px) {
+		width: 70%;
+	}
 }
 
 /************************
@@ -283,12 +314,28 @@ SECTION - SECOND
 		pointer-events: none;
 	}
 
+	&::after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: #C16039;
+		background: -webkit-linear-gradient(0deg, #000000 0%, #FFFFFF00 30%);
+		background: -moz-linear-gradient(0deg, #000000 0%, #FFFFFF00 30%);
+		background: linear-gradient(0deg, #000000 0%, #FFFFFF00 30%);
+		pointer-events: none;
+	}
+
 	.container {
 		padding-top: 80px;
 		padding-bottom: 80px;
 	}
 
 	h2 {
+		font-family: 'Montserrat';
+		font-weight: 700;
 		color: $white;
 		font-size: 20px;
 		margin-bottom: 40px;
@@ -319,18 +366,240 @@ SECTION - SECOND
 
 
 /************************
+SECTION - THIRD
+************************/
+.third, .fifth {
+	position: relative;
+	padding: 300px 0;
+	background: url('./img/pixel-heart.png') center repeat;
+	height: 100vh;
+
+	&::before {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: #f8aeae;
+		background: -webkit-linear-gradient(180deg, #f8aeae 0%, #FFFFFF00 20%);
+		background: -moz-linear-gradient(180deg, #f8aeae 0%, #FFFFFF00 20%);
+		background: linear-gradient(180deg, #f8aeae 0%, #FFFFFF00 20%);
+		pointer-events: none;
+	}
+
+	&::after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: #f8aeae;
+		background: -webkit-linear-gradient(0deg, #f8aeae 0%, #FFFFFF00 20%);
+		background: -moz-linear-gradient(0deg, #f8aeae 0%, #FFFFFF00 20%);
+		background: linear-gradient(0deg, #f8aeae 0%, #FFFFFF00 20%);
+		pointer-events: none;
+	}
+
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	.left {
+		text-align: center;
+
+		h2 {
+			font-family: 'Montserrat';
+			font-weight: 700;
+			font-size: 40px;
+			margin-bottom: 30px;
+
+			@media screen and (min-width:768px) {
+				font-size: 64px;
+			}
+		}
+
+		.buttons {
+			span, a {
+				font-family: 'Montserrat';
+				font-size: 20px;	
+				display: inline-block;
+				background: $white;
+				padding: 12px 24px;
+				border: 2px solid $black;
+				cursor: pointer;
+				transition: all 0.2s ease-in-out;
+
+				&:hover {
+					background: $black;
+					color: $white;
+				}
+			} 
+
+			span {
+				margin-right: 12px;
+			}
+		}
+	}
+}
+
+
+/************************
+SECTION - FORTH
+************************/
+.forth {
+	position: relative;
+	padding: 300px 0;
+	background: url('./img/repeated-square.png') center repeat;
+
+	h2 {
+		font-family: 'Montserrat';
+		font-weight: 700;
+		color: $black;
+		font-size: 20px;
+		margin-bottom: 40px;
+		text-align: center;
+
+		@media screen and (min-width:768px) {
+			font-size: 40px;
+			margin-bottom: 60px;
+		}
+	}
+}
+
+
+/************************
+SECTION - FIFTH
+************************/
+.fifth {
+	background: url('./img/watercolor.png') center repeat;
+
+	&::before {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: #d7c8a6;
+		background: -webkit-linear-gradient(180deg, #d7c8a6 0%, #FFFFFF00 20%);
+		background: -moz-linear-gradient(180deg, #d7c8a6 0%, #FFFFFF00 20%);
+		background: linear-gradient(180deg, #d7c8a6 0%, #FFFFFF00 20%);
+		pointer-events: none;
+	}
+
+	&::after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: #d7c8a6;
+		background: -webkit-linear-gradient(0deg, #d7c8a6 0%, #FFFFFF00 20%);
+		background: -moz-linear-gradient(0deg, #d7c8a6 0%, #FFFFFF00 20%);
+		background: linear-gradient(0deg, #d7c8a6 0%, #FFFFFF00 20%);
+		pointer-events: none;
+	}
+}
+
+/************************
+SECTION - SIXTH
+************************/
+.sixth {
+	position: relative;
+	padding: 300px 0;
+	background: url('./img/dot-grid.png') center repeat;
+
+	&::before {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: #C16039;
+		background: -webkit-linear-gradient(180deg, #FFFFFF 0%, #FFFFFF00 20%);
+		background: -moz-linear-gradient(180deg, #FFFFFF 0%, #FFFFFF00 20%);
+		background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF00 20%);
+		pointer-events: none;
+	}
+
+	h2 {
+		font-family: 'Montserrat';
+		font-weight: 700;
+		color: $black;
+		font-size: 20px;
+		margin-bottom: 40px;
+		text-align: center;
+
+		@media screen and (min-width:768px) {
+			font-size: 40px;
+			margin-bottom: 60px;
+		}
+	}
+
+	.grid-item,
+	.grid-sizer {
+		width: calc(50% - 24px);
+		margin-bottom: 48px;
+
+		@media screen and (min-width: 768px) {
+			/* 5 columns for larger screens */
+			width: calc(33% - 20px);
+			margin-bottom: 40px;
+		}
+	}
+
+	.sixth__solo {
+		background: $white;
+		padding: 16px;
+		border-radius: 20px;
+		border: 1px solid #777777;
+
+		.sixth__text {
+			font-family: 'Montserrat';
+			font-size: 15px;
+			text-align: left;
+			display: block;
+			margin-bottom: 16px;
+		}
+
+		.sixth__author {
+			font-family: 'Montserrat';
+			font-size: 13px;
+			font-style: italic;
+			color: #888888;
+			text-align: right;
+			display: block;
+		}
+	}
+}
+
+
+/************************
 LAYERS
 ************************/
 .twitch__chat {
 	display: none;
 	
 	@media screen and (min-width:1024px) {
-		display: block;
+		//display: block;
 		position: fixed;
 		width: 350px;
 		top: 50%;
-		right: 0;
+		right: -100%;
 		transform: translateY(-50%);
+		transition: all 0.3s ease-in-out;
+		z-index: 100px;
+
+		&.-showTwitch {
+			right: 0;
+		}
 	}
 
 	iframe {
@@ -338,6 +607,71 @@ LAYERS
 		height: 70vh;
 	}
 }
+
+.layer__motiv {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	background: $black-40;
+	transition: all 0.14s ease-in-out;
+
+	&.-showLayer {
+		opacity: 1;
+		pointer-events: all;
+	}
+
+	&.layer__motivtwo {
+		.container {
+			img {
+				height: 60vh;
+				width: auto;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.container {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: center;
+		text-align: center;
+
+		.layer__close {
+			position: absolute;
+			width: 60px;
+			height: 60px;
+			top:70px;
+			right: 70px;
+			border-radius: 100%;
+			background: $black;
+			border: 1px solid $white;
+			background: url('./img/icon_close.svg') no-repeat center;
+			background-size: 30%;
+			cursor: pointer;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+			display: block;
+
+			&.jebaited {
+				width: 160px;
+				height: auto;
+				display: inline-block;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+
 /************************
 ANIMATION
 ************************/

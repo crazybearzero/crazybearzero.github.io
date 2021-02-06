@@ -15,6 +15,47 @@ $(document).ready( function() {
     return false;
   });
 
+  animName();
+
+  $('.js-replay').on('click', function() {
+    $('.replay').removeClass('-animEnded');
+    $('.title span').removeClass('-appear -colored -sized');
+    animName();
+  });
+
+  $(window).scroll(function (event) {
+    var viewportHeight = $(window).height();
+    var scroll = $(window).scrollTop() + 200;
+    if(scroll > viewportHeight) {
+      $('.twitch__chat').addClass('-showTwitch');
+    } else {
+      $('.twitch__chat').removeClass('-showTwitch');
+    }
+  });
+
+  $('.js-motivone').on('click', function() {
+    openlayer('.layer__motivone');
+  });
+
+  $('.js-motivtwo').on('click', function() {
+    openlayer('.layer__motivtwo');
+  });
+
+  $('.js-close').on('click', function() {
+    $('.layer__motiv').removeClass('-showLayer');
+  });
+
+  $(document).mouseup(function(e) {
+    console.log('test');
+    var container = $(".layer__motiv .left");
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      $(".layer__motiv").removeClass('-showLayer');
+    }
+  });
+
+});
+
+function animName() {
   setTimeout(function(){ appearTitle('#title1', '-appear') }, 2500);
   setTimeout(function(){ appearTitle('#title2', '-appear') }, 2900);
   setTimeout(function(){ appearTitle('#title3', '-appear') }, 3300);
@@ -48,7 +89,19 @@ $(document).ready( function() {
   setTimeout(function(){ appearTitle('#title10', '-colored') }, 10500);
 
   setTimeout(function(){ appearTitle('.subtitle span', '-reveal') }, 10700);
-});
+
+  setTimeout(function(){ appearTitle('.replay', '-animEnded') }, 11000);
+
+  $('.sixth__global .grid').masonry({
+
+    columnWidth: '.grid-sizer',
+    itemSelector: '.grid-item',
+    percentPosition: true,
+    gutter: 32,
+    horizontalOrder: true,
+    fitWidth: true
+  });
+}
 
 function appearTitle (elt, test) {
   $(elt).addClass(test);
@@ -56,4 +109,8 @@ function appearTitle (elt, test) {
 
 function disapearTitle (elt, test) {
   $(elt).removeClass(test);
+}
+
+function openlayer(showLayer) {
+  $(showLayer).addClass('-showLayer');
 }
