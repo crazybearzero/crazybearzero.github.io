@@ -340,7 +340,7 @@ LAYERS
   .twitch__chat {
     display: block;
     position: fixed;
-    width: 25%;
+    width: 350px;
     top: 50%;
     right: 0;
     -webkit-transform: translateY(-50%);
