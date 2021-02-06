@@ -1,0 +1,375 @@
+$white: #FFFFFF;
+$black: #000000;
+$blue: #66aadd;
+$yellow: #ffdd00;
+$dayDuration: 2s;
+$foregroundDuration: 30s;
+$hillsDuration: 60s;
+$rocks1Duration: 120s;
+$rocks2Duration: 240s;
+
+@font-face {
+	font-family: 'Hanging Letters';
+	src: url('./fonts/HangingLetters.eot');
+	src: url('./fonts/HangingLetters.eot?#iefix') format('embedded-opentype'),
+			url('./fonts/HangingLetters.woff2') format('woff2'),
+			url('./fonts/HangingLetters.woff') format('woff'),
+			url('./fonts/HangingLetters.ttf') format('truetype'),
+			url('./fonts/HangingLetters.svg#HangingLetters') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Bomber Balloon';
+	src: url('./fonts/BomberBalloon.eot');
+	src: url('./fonts/BomberBalloon.eot?#iefix') format('embedded-opentype'),
+			url('./fonts/BomberBalloon.woff2') format('woff2'),
+			url('./fonts/BomberBalloon.woff') format('woff'),
+			url('./fonts/BomberBalloon.ttf') format('truetype'),
+			url('./fonts/BomberBalloon.svg#BomberBalloon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+/************************
+GLOBALS
+************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding:0;
+	width:100%;
+	height:100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1240px;
+  padding: 0 16px;
+  margin: 0 auto;
+
+	@media screen and (min-width:768px) {
+		padding: 0 32px;
+	}
+}
+
+
+/************************
+INTRO
+************************/
+.intro {
+	position: relative;
+  height: 100vh;
+
+	&::after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: #C16039;
+		background: -webkit-linear-gradient(0deg, #000000 0%, #FFFFFF00 15%);
+		background: -moz-linear-gradient(0deg, #000000 0%, #FFFFFF00 15%);
+		background: linear-gradient(0deg, #000000 0%, #FFFFFF00 15%);
+		pointer-events: none;
+	}
+}
+
+.container {
+	position: relative;
+	height: 100%;
+
+	.title {
+		position: relative;
+		font-family: 'Hanging Letters';
+		color: $white;
+		font-size: 30px;
+		text-align: center;
+
+		@media screen and (min-width:600px) {
+			font-size: 62px;
+		}
+
+		@media screen and (min-width:768px) {
+			font-size: 75px;
+		}
+
+		@media screen and (min-width:1024px) {
+			font-size: 98px;
+		}
+
+		span {
+			display: inline-block;
+			transform: translateY(-100%);
+			transform-origin: top center;
+			transition: all 0.5s cubic-bezier(0.1, 0, 0, 1);
+			text-shadow: 0px 0px 12px #FFFCB3;
+
+			&.-appear {
+				transform: translateY(0);
+			}
+
+			&.-sized {
+				transition: all 0.2s cubic-bezier(0.1, 0, 0, 1);
+				transform: translateY(0) scale(1.25) rotate(15deg);
+			}
+
+			&.-colored {
+				transition: all 0s cubic-bezier(0.1, 0, 0, 1);
+				text-shadow: none;
+				color: $black;
+				text-shadow: 0px 0px 4px #000000;
+			}
+		}
+	}
+
+	.subtitle {
+		font-family: 'Bomber Balloon';
+		font-size: 38px;
+		line-height: 45px;
+		text-shadow: 0px 0px 4px #000000;
+		position: absolute;
+		width: calc(100% - 32px);
+		top: 25%;
+		text-align: center;
+		transform: translateY(-50%);
+		
+		@media screen and (min-width:600px) {
+			font-size: 70px;
+			line-height: 80px;
+		}
+		@media screen and (min-width:768px) {
+			font-size: 60px;
+			line-height: 100px;
+			letter-spacing: -1px;
+			width: calc(100% - 64px);
+		}
+
+		@media screen and (min-width:1024px) {
+			font-size: 95px;
+		}
+
+		span {
+			position: relative;
+			display: inline-block;
+			opacity: 0;
+			transform: translateY(-50%);
+			transition: all 1s cubic-bezier(0.12, 0.43, 0.4, 1);
+
+			&:nth-child(odd) {
+				color: $blue;
+			}
+
+			&:nth-child(even) {
+				color: $yellow;
+			}
+
+			&.-reveal{
+				opacity: 1;
+				transform: translateY(0%);
+			}
+		}
+	}
+}
+
+.content {
+	position:absolute;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+
+#paralax{
+	position:absolute;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	background:url("./img/background.jpg");
+	background-size:cover;
+	background-position: center; 
+
+	.layer{
+		position:absolute;
+		width:400%;
+
+		&.foreground{
+			height:50%;						
+			bottom:0;
+			background:url("./img/foreground.png") center repeat-x;
+			background-size: 25% 100%;
+			animation: slideshow $foregroundDuration linear infinite;
+		}
+	
+		&.hills{
+			height:40%;						
+			bottom:15%;
+			background:url("./img/hills.png") center repeat-x;
+			background-size: 25% 100%;
+			animation: slideshow $hillsDuration linear infinite;
+		}
+	
+		&.rocks1{
+			height:35%;						
+			bottom:25%;
+			background:url("./img/rocks1.png") center repeat-x;
+			background-size: 25% 100%;
+			animation: slideshow $rocks1Duration linear infinite;
+		}
+	
+		&.rocks2{
+			height:40%;						
+			bottom:15%;
+			background:url("./img/rocks2.png") center repeat-x;
+			background-size: 25% 100%;
+			animation: slideshow $rocks2Duration linear infinite;
+		}
+	}
+}
+
+.intro__arrowdown {
+	position: absolute;
+	z-index: 1;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	cursor: pointer;
+
+	svg {
+		animation: arrowbounce 1.5s infinite;
+	}
+}
+
+
+/************************
+SECTION - 
+************************/
+section {
+	position:relative;
+}
+
+.left {
+	width: 70%;
+}
+
+/************************
+SECTION - SECOND
+************************/
+.second {
+	position: relative;
+	padding: 300px 0;
+	background: url('./img/binding_dark.png') center repeat;
+
+	&::before {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: #C16039;
+		background: -webkit-linear-gradient(180deg, #000000 0%, #FFFFFF00 30%);
+		background: -moz-linear-gradient(180deg, #000000 0%, #FFFFFF00 30%);
+		background: linear-gradient(180deg, #000000 0%, #FFFFFF00 30%);
+		pointer-events: none;
+	}
+
+	.container {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+
+	h2 {
+		color: $white;
+		font-size: 20px;
+		margin-bottom: 40px;
+		text-align: center;
+
+		@media screen and (min-width:768px) {
+			font-size: 40px;
+			margin-bottom: 60px;
+		}
+	}
+
+	.video__container {
+		position: relative;
+		padding-bottom: 56.25%;
+  	height: 0;
+
+		object,
+		embed,
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+
+/************************
+LAYERS
+************************/
+.twitch__chat {
+	display: none;
+	
+	@media screen and (min-width:1024px) {
+		display: block;
+		position: fixed;
+		width: 25%;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+	}
+
+	iframe {
+		width: 100%;
+		height: 70vh;
+	}
+}
+/************************
+ANIMATION
+************************/
+@keyframes slideshow {
+  0% {
+		transform: translateX(0%) scale(1.04);
+	}
+  100% {
+		transform: translateX(-50%) scale(1.04);
+	}
+}
+
+@keyframes dayToNight {
+  0% {
+		-webkit-filter: hue-rotate(0deg) brightness(1); 
+		filter: hue-rotate(0deg) brightness(1); 
+	}
+  50% { 
+		-webkit-filter: hue-rotate(180deg) brightness(0.1); 
+		filter: hue-rotate(180deg) brightness(0.1); 
+	}
+	100% { 
+		-webkit-filter: hue-rotate(0deg) brightness(1); 
+		filter: hue-rotate(0deg) brightness(1); 
+	}
+}
+
+@keyframes arrowbounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0); }
+  40% {
+    transform: translateY(-15px); }
+  60% {
+    transform: translateY(-7px); }
+}
