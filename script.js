@@ -38,19 +38,40 @@ $(document).ready( function() {
   });
 
   $('.js-motivtwo').on('click', function() {
+    if($(this).hasClass('-jebaited')) {
+      $('.jebaited').show();
+    }
     openlayer('.layer__motivtwo');
   });
 
   $('.js-close').on('click', function() {
     $('.layer__motiv').removeClass('-showLayer');
+    $('.jebaited').hide();
   });
 
   $(document).mouseup(function(e) {
-    console.log('test');
     var container = $(".layer__motiv .left");
     if (!container.is(e.target) && container.has(e.target).length === 0) {
       $(".layer__motiv").removeClass('-showLayer');
     }
+  });
+
+  $(window).on('mousemove click', function(e) {
+    var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
+    var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+    lFollowX = (20 * lMouseX) / 150; // 100 : 12 = lMouxeX : lFollow
+    lFollowY = (10 * lMouseY) / 150;
+  });
+
+  moveBackground();
+
+  $('.sixth__global .grid').masonry({
+    columnWidth: '.grid-sizer',
+    itemSelector: '.grid-item',
+    percentPosition: true,
+    gutter: 32,
+    horizontalOrder: true,
+    fitWidth: true
   });
 
 });
@@ -91,16 +112,6 @@ function animName() {
   setTimeout(function(){ appearTitle('.subtitle span', '-reveal') }, 10700);
 
   setTimeout(function(){ appearTitle('.replay', '-animEnded') }, 11000);
-
-  $('.sixth__global .grid').masonry({
-
-    columnWidth: '.grid-sizer',
-    itemSelector: '.grid-item',
-    percentPosition: true,
-    gutter: 32,
-    horizontalOrder: true,
-    fitWidth: true
-  });
 }
 
 function appearTitle (elt, test) {
@@ -113,4 +124,25 @@ function disapearTitle (elt, test) {
 
 function openlayer(showLayer) {
   $(showLayer).addClass('-showLayer');
+}
+
+var lFollowX = 0,
+lFollowY = 0,
+x = 0,
+y = 0,
+friction = 1 / 10;
+
+function moveBackground(){
+  x += (lFollowX - x) * friction;
+  y += (lFollowY - y) * friction;
+
+  translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+
+  jQuery('.forth__bg').css({
+  '-webit-transform': translate,
+  '-moz-transform': translate,
+  'transform': translate
+  });
+
+  window.requestAnimationFrame(moveBackground);
 }
