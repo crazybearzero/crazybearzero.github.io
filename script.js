@@ -25,12 +25,19 @@ $(document).ready( function() {
 
   $(window).scroll(function (event) {
     var viewportHeight = $(window).height();
-    var scroll = $(window).scrollTop() + 200;
+    var scroll = $(window).scrollTop() + 300;
     if(scroll > viewportHeight) {
       $('.twitch__chat').addClass('-showTwitch');
     } else {
       $('.twitch__chat').removeClass('-showTwitch');
     }
+
+    $(".js-onview, .credits").each(function() {
+      if (isScrolledIntoView($(this))) {
+        $(this).addClass("-reveal");
+      }
+    });
+    
   });
 
   $('.js-motivone').on('click', function() {
@@ -159,4 +166,14 @@ function moveBackground(){
   });
 
   window.requestAnimationFrame(moveBackground);
+}
+
+function isScrolledIntoView(elem) {
+  var docViewTop = $(window).scrollTop();
+  var docViewBottom = docViewTop + $(window).height();
+
+  var elemTop = $(elem).offset().top;
+  var elemBottom = elemTop + $(elem).height();
+
+  return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 }
