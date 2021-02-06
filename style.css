@@ -95,9 +95,9 @@ INTRO
   height: 100%;
   top: 0;
   left: 0;
-  background: #C16039;
-  background: -webkit-gradient(linear, left bottom, left top, from(#000000), color-stop(15%, #FFFFFF00));
-  background: linear-gradient(0deg, #000000 0%, #FFFFFF00 15%);
+  background: #2a1616;
+  background: -webkit-gradient(linear, left bottom, left top, from(#2a1616), color-stop(20%, #FFFFFF00));
+  background: linear-gradient(0deg, #2a1616 0%, #FFFFFF00 20%);
   pointer-events: none;
 }
 
@@ -183,7 +183,7 @@ INTRO
 
 .content .aup {
   position: absolute;
-  width: 142px;
+  width: 76px;
   height: auto;
   top: 78%;
   left: 50%;
@@ -311,6 +311,19 @@ INTRO
   transition: all 0.15s ease-in-out;
 }
 
+.intro__banner {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+.intro__banner p {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
 /************************
 SECTION - 
 ************************/
@@ -333,7 +346,7 @@ SECTION - SECOND
 ************************/
 .second {
   position: relative;
-  padding: 300px 0;
+  padding: 200px 0;
   background: url("./img/binding_dark.png") center repeat;
 }
 
@@ -344,9 +357,9 @@ SECTION - SECOND
   height: 100%;
   top: 0;
   left: 0;
-  background: #C16039;
-  background: -webkit-gradient(linear, left top, left bottom, from(#000000), color-stop(30%, #FFFFFF00));
-  background: linear-gradient(180deg, #000000 0%, #FFFFFF00 30%);
+  background: #2a1616;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2a1616), color-stop(20%, #FFFFFF00));
+  background: linear-gradient(180deg, #2a1616 0%, #FFFFFF00 20%);
   pointer-events: none;
 }
 
@@ -357,9 +370,9 @@ SECTION - SECOND
   height: 100%;
   top: 0;
   left: 0;
-  background: #C16039;
-  background: -webkit-gradient(linear, left bottom, left top, from(#000000), color-stop(30%, #FFFFFF00));
-  background: linear-gradient(0deg, #000000 0%, #FFFFFF00 30%);
+  background: #2a1616;
+  background: -webkit-gradient(linear, left bottom, left top, from(#2a1616), color-stop(30%, #FFFFFF00));
+  background: linear-gradient(0deg, #2a1616 0%, #FFFFFF00 30%);
   pointer-events: none;
 }
 
@@ -391,7 +404,7 @@ SECTION - THIRD
   position: relative;
   padding: 300px 0;
   background: url("./img/pixel-heart.png") center repeat;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .third::before, .fifth::before {
@@ -484,7 +497,8 @@ SECTION - FORTH
 ************************/
 .forth {
   position: relative;
-  padding: 300px 0;
+  padding: 120px 0;
+  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -496,6 +510,10 @@ SECTION - FORTH
   left: 0;
   background: url("./img/repeated-square.png") center repeat;
   pointer-events: none;
+}
+
+.forth .container {
+  padding-top: 50px;
 }
 
 .forth h2 {
@@ -548,12 +566,125 @@ SECTION - FIFTH
 }
 
 /************************
+SECTION - SEKIRO
+************************/
+.sekiro {
+  position: relative;
+  padding: 150px 0;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.sekiro .sekiro__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url("./img/sekirodeath.jpg") center repeat;
+  pointer-events: none;
+}
+
+.sekiro .container {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  max-width: 1240px;
+  height: 100%;
+}
+
+.sekiro .container img {
+  position: absolute;
+  display: block;
+  height: auto;
+}
+
+.sekiro .container .lulone {
+  width: 40px;
+  top: 10%;
+  left: 12%;
+  -webkit-animation: lulw 3s linear infinite;
+          animation: lulw 3s linear infinite;
+}
+
+.sekiro .container .lultwo {
+  width: 55px;
+  top: 30%;
+  left: 60%;
+  -webkit-animation: lulw 5s linear infinite;
+          animation: lulw 5s linear infinite;
+}
+
+.sekiro .container .lulthree {
+  width: 80px;
+  top: 80%;
+  left: 50%;
+  -webkit-animation: lulw 3.2s linear infinite 0.4s;
+          animation: lulw 3.2s linear infinite 0.4s;
+}
+
+.sekiro .container .lulfour {
+  width: 30px;
+  top: 56%;
+  left: 30%;
+  -webkit-animation: lulw 2.2s linear infinite 0.6s;
+          animation: lulw 2.2s linear infinite 0.6s;
+}
+
+.sekiro .container .lulfive {
+  width: 48px;
+  top: 0;
+  left: 68%;
+  -webkit-animation: lulw 3.2s linear infinite 2.8s;
+          animation: lulw 3.2s linear infinite 2.8s;
+}
+
+.sekiro .container .lulsix {
+  width: 70px;
+  top: 90%;
+  left: 22%;
+  -webkit-animation: lulw 5.2s linear infinite 1.2s;
+          animation: lulw 5.2s linear infinite 1.2s;
+}
+
+.sekiro .container .lulseven {
+  width: 90px;
+  top: 2%;
+  left: 35%;
+  -webkit-animation: lulw 7.2s linear infinite 3.2s;
+          animation: lulw 7.2s linear infinite 3.2s;
+}
+
+.sekiro .container .luleight {
+  width: 76px;
+  top: 50%;
+  left: 7%;
+  -webkit-animation: lulw 5.2s linear infinite 2.5s;
+          animation: lulw 5.2s linear infinite 2.5s;
+}
+
+/************************
 SECTION - SIXTH
 ************************/
 .sixth {
   position: relative;
   padding: 120px 0 100px 0;
+  overflow: hidden;
+}
+
+.sixth .sixth__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
   background: url("./img/dot-grid.png") center repeat;
+  pointer-events: none;
 }
 
 .sixth::before {
@@ -638,7 +769,7 @@ FOOTER
 footer {
   position: relative;
   padding: 120px 0 100px 0;
-  height: 100vh;
+  min-height: 100vh;
   background: #000000;
 }
 
@@ -659,12 +790,37 @@ footer h2 {
 }
 
 footer .footer__container {
-  height: 60%;
+  position: relative;
+  height: 50%;
   overflow: hidden;
 }
 
+footer .footer__container::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: -webkit-linear-gradient(90deg, #000000 0%, #FFFFFF00 20%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+footer .footer__container::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: -webkit-linear-gradient(-90deg, #000000 0%, #FFFFFF00 20%);
+  pointer-events: none;
+  z-index: 1;
+}
+
 footer .credits {
-  padding: 100px 0;
+  padding: 80px 0;
   text-align: center;
   -webkit-animation: credits 14s linear infinite;
           animation: credits 14s linear infinite;
@@ -699,7 +855,7 @@ LAYERS
   .twitch__chat {
     display: block;
     position: fixed;
-    width: 350px;
+    width: 320px;
     top: 50%;
     right: -100%;
     -webkit-transform: translateY(-50%);
@@ -917,6 +1073,30 @@ ANIMATION
     opacity: 0;
     -webkit-transform: translateY(-125%);
             transform: translateY(-125%);
+  }
+}
+
+@-webkit-keyframes lulw {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes lulw {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

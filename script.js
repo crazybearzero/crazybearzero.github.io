@@ -57,8 +57,8 @@ $(document).ready( function() {
   });
 
   $(window).on('mousemove click', function(e) {
-    var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
-    var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+    var lMouseX = Math.max(-300, Math.min(300, $(window).width() / 2 - e.clientX));
+    var lMouseY = Math.max(-200, Math.min(200, $(window).height() / 2 - e.clientY));
     lFollowX = (20 * lMouseX) / 150; // 100 : 12 = lMouxeX : lFollow
     lFollowY = (10 * lMouseY) / 150;
   });
@@ -137,11 +137,25 @@ function moveBackground(){
   y += (lFollowY - y) * friction;
 
   translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+  translate2 = 'translate(' + x/1.4 + 'px, ' + y/1.4 + 'px) scale(1.1)';
+  translate3 = 'translate(' + x/2.3 + 'px, ' + y/2.3 + 'px) scale(1.1)';
 
-  jQuery('.forth__bg').css({
+  jQuery('.forth__bg, .sekiro__bg, .sekiro img, .sixth__bg').css({
   '-webit-transform': translate,
   '-moz-transform': translate,
   'transform': translate
+  });
+
+  jQuery('.sekiro .-paraone').css({
+    '-webit-transform': translate2,
+    '-moz-transform': translate2,
+    'transform': translate2
+  });
+
+  jQuery('.sekiro -paratwo').css({
+    '-webit-transform': translate3,
+    '-moz-transform': translate3,
+    'transform': translate3
   });
 
   window.requestAnimationFrame(moveBackground);
