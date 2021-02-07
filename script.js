@@ -82,15 +82,20 @@ $(document).ready( function() {
 function openDoors() {
   $('.intro__bear').on('click', function() {
     $('.intro__left, .intro__right').addClass('-doorsOpened');
-    $('body').removeClass('-overflowStart');
+    
 
     setTimeout(function(){
       animName();
+      
+    }, 200);
+
+    setTimeout(function(){
+      $('body').removeClass('-overflowStart');
       initparticles();
 
       moveBackground();
       masonry();
-    }, 350);
+    }, 10000)
   });
 }
 
