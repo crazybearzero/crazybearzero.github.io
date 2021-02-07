@@ -55,11 +55,11 @@ html.-overflow, body.-overflow {
   overflow: hidden;
 }
 
-html.-overflow > *, body.-overflow > * {
+html.-overflowStart > *, body.-overflowStart > * {
   display: none;
 }
 
-html.-overflow > .intro, body.-overflow > .intro {
+html.-overflowStart > .intro, body.-overflowStart > .intro {
   display: block;
 }
 
