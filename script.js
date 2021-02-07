@@ -72,13 +72,27 @@ $(document).ready( function() {
 
   moveBackground();
 
-  $('.sixth__global .grid').masonry({
-    columnWidth: '.grid-sizer',
-    itemSelector: '.grid-item',
-    percentPosition: true,
-    gutter: 32,
-    horizontalOrder: true,
-    fitWidth: true
+  // var $grid = $('.sixth__global .grid').masonry({
+  //   columnWidth: '.grid-sizer',
+  //   itemSelector: '.grid-item',
+  //   percentPosition: true,
+  //   gutter: 30,
+  // });
+
+  // $grid.imagesLoaded().done( function() {
+  //   console.log('test');
+  //   $grid.masonry('layout');
+  // });
+
+  var $grid = $('.sixth__global .grid');
+  $grid.imagesLoaded().done(function(){
+    console.log('test');
+    $grid.masonry({
+      columnWidth: '.grid-sizer',
+      itemSelector: '.grid-item',
+      percentPosition: true,
+      gutter: 30,
+    });
   });
 
 });
@@ -144,22 +158,22 @@ function moveBackground(){
   y += (lFollowY - y) * friction;
 
   translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
-  translate2 = 'translate(' + x/1.4 + 'px, ' + y/1.4 + 'px) scale(1.1)';
-  translate3 = 'translate(' + x/2.3 + 'px, ' + y/2.3 + 'px) scale(1.1)';
+  translate2 = 'translate(' + x/1.2 + 'px, ' + y/1.2 + 'px) scale(1.1)';
+  translate3 = 'translate(' + x/4.3 + 'px, ' + y/2.3 + 'px) scale(1.1)';
 
-  jQuery('.forth__bg, .sekiro__bg, .sekiro img, .sixth__bg').css({
+  jQuery('.forth__bg, .sekiro__bg, .sixth__bg').css({
   '-webit-transform': translate,
   '-moz-transform': translate,
   'transform': translate
   });
 
-  jQuery('.sekiro .-paraone').css({
+  jQuery('.sekiro .-paratwo').css({
     '-webit-transform': translate2,
     '-moz-transform': translate2,
     'transform': translate2
   });
 
-  jQuery('.sekiro -paratwo').css({
+  jQuery('.sekiro .-paraone').css({
     '-webit-transform': translate3,
     '-moz-transform': translate3,
     'transform': translate3

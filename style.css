@@ -96,8 +96,8 @@ INTRO
   top: 0;
   left: 0;
   background: #2a1616;
-  background: -webkit-gradient(linear, left bottom, left top, from(#2a1616), color-stop(20%, #FFFFFF00));
-  background: linear-gradient(0deg, #2a1616 0%, #FFFFFF00 20%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#2a1616), color-stop(20%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(0deg, #2a1616 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 100%);
   pointer-events: none;
 }
 
@@ -392,7 +392,7 @@ SECTION - SECOND
 ************************/
 .second {
   position: relative;
-  padding: 200px 0;
+  padding: 120px 0;
   background: url("./img/binding_dark.png") center repeat;
 }
 
@@ -404,8 +404,8 @@ SECTION - SECOND
   top: 0;
   left: 0;
   background: #2a1616;
-  background: -webkit-gradient(linear, left top, left bottom, from(#2a1616), color-stop(20%, #FFFFFF00));
-  background: linear-gradient(180deg, #2a1616 0%, #FFFFFF00 20%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#2a1616), color-stop(20%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(180deg, #2a1616 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 100%);
   pointer-events: none;
 }
 
@@ -417,8 +417,8 @@ SECTION - SECOND
   top: 0;
   left: 0;
   background: #2a1616;
-  background: -webkit-gradient(linear, left bottom, left top, from(#2a1616), color-stop(30%, #FFFFFF00));
-  background: linear-gradient(0deg, #2a1616 0%, #FFFFFF00 30%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#2a1616), color-stop(30%, #00000000));
+  background: linear-gradient(0deg, #2a1616 0%, #00000000 30%);
   pointer-events: none;
 }
 
@@ -461,8 +461,8 @@ SECTION - THIRD
   top: 0;
   left: 0;
   background: #f8aeae;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f8aeae), color-stop(20%, #FFFFFF00));
-  background: linear-gradient(180deg, #f8aeae 0%, #FFFFFF00 20%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f8aeae), color-stop(20%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(180deg, #f8aeae 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 100%);
   pointer-events: none;
 }
 
@@ -474,8 +474,8 @@ SECTION - THIRD
   top: 0;
   left: 0;
   background: #f8aeae;
-  background: -webkit-gradient(linear, left bottom, left top, from(#f8aeae), color-stop(20%, #FFFFFF00));
-  background: linear-gradient(0deg, #f8aeae 0%, #FFFFFF00 20%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#f8aeae), color-stop(20%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(0deg, #f8aeae 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 100%);
   pointer-events: none;
 }
 
@@ -593,8 +593,8 @@ SECTION - FIFTH
   top: 0;
   left: 0;
   background: #d7c8a6;
-  background: -webkit-gradient(linear, left top, left bottom, from(#d7c8a6), color-stop(20%, #FFFFFF00));
-  background: linear-gradient(180deg, #d7c8a6 0%, #FFFFFF00 20%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#d7c8a6), color-stop(20%, rgba(0, 0, 0, 0.01)), to(rgba(0, 0, 0, 0.01)));
+  background: linear-gradient(180deg, #d7c8a6 0%, rgba(0, 0, 0, 0.01) 20%, rgba(0, 0, 0, 0.01) 100%);
   pointer-events: none;
 }
 
@@ -606,32 +606,57 @@ SECTION - FIFTH
   top: 0;
   left: 0;
   background: #d7c8a6;
-  background: -webkit-gradient(linear, left bottom, left top, from(#d7c8a6), color-stop(20%, #FFFFFF00));
-  background: linear-gradient(0deg, #d7c8a6 0%, #FFFFFF00 20%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#d7c8a6), color-stop(20%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(0deg, #d7c8a6 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 100%);
   pointer-events: none;
 }
 
 /************************
-SECTION - SEKIRO
+SECTION - IMPOSSIBLE
 ************************/
-.sekiro {
+.impossible {
   position: relative;
   padding: 150px 0;
   min-height: 100vh;
   overflow: hidden;
+  background: #000000;
 }
 
-.sekiro .sekiro__bg {
+.impossible .impossible__bg {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background: url("./img/sekirodeath.jpg") center repeat;
+  background: url("./img/sekirodeath.jpg") center left repeat;
+  background-size: 100% auto;
   pointer-events: none;
+  z-index: 0;
 }
 
-.sekiro .container {
+.impossible h2 {
+  font-family: 'Montserrat';
+  font-size: 30px;
+  color: #FFFFFF;
+  top: 20px;
+  text-align: center;
+  z-index: 1;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .impossible h2 {
+    font-size: 46px;
+  }
+}
+
+.impossible .left img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.impossible .impossible__lulw {
   position: absolute;
   width: 100%;
   height: 0;
@@ -644,13 +669,13 @@ SECTION - SEKIRO
   height: 100%;
 }
 
-.sekiro .container img {
+.impossible .impossible__lulw img {
   position: absolute;
   display: block;
   height: auto;
 }
 
-.sekiro .container .lulone {
+.impossible .impossible__lulw .lulone {
   width: 40px;
   top: 10%;
   left: 12%;
@@ -658,7 +683,7 @@ SECTION - SEKIRO
           animation: lulw 3s linear infinite;
 }
 
-.sekiro .container .lultwo {
+.impossible .impossible__lulw .lultwo {
   width: 55px;
   top: 30%;
   left: 60%;
@@ -666,7 +691,7 @@ SECTION - SEKIRO
           animation: lulw 5s linear infinite;
 }
 
-.sekiro .container .lulthree {
+.impossible .impossible__lulw .lulthree {
   width: 80px;
   top: 80%;
   left: 50%;
@@ -674,7 +699,7 @@ SECTION - SEKIRO
           animation: lulw 3.2s linear infinite 0.4s;
 }
 
-.sekiro .container .lulfour {
+.impossible .impossible__lulw .lulfour {
   width: 30px;
   top: 56%;
   left: 30%;
@@ -682,7 +707,7 @@ SECTION - SEKIRO
           animation: lulw 2.2s linear infinite 0.6s;
 }
 
-.sekiro .container .lulfive {
+.impossible .impossible__lulw .lulfive {
   width: 48px;
   top: 0;
   left: 68%;
@@ -690,7 +715,7 @@ SECTION - SEKIRO
           animation: lulw 3.2s linear infinite 2.8s;
 }
 
-.sekiro .container .lulsix {
+.impossible .impossible__lulw .lulsix {
   width: 70px;
   top: 90%;
   left: 22%;
@@ -698,7 +723,7 @@ SECTION - SEKIRO
           animation: lulw 5.2s linear infinite 1.2s;
 }
 
-.sekiro .container .lulseven {
+.impossible .impossible__lulw .lulseven {
   width: 90px;
   top: 2%;
   left: 35%;
@@ -706,7 +731,7 @@ SECTION - SEKIRO
           animation: lulw 7.2s linear infinite 3.2s;
 }
 
-.sekiro .container .luleight {
+.impossible .impossible__lulw .luleight {
   width: 76px;
   top: 50%;
   left: 7%;
@@ -733,19 +758,6 @@ SECTION - SIXTH
   pointer-events: none;
 }
 
-.sixth::before {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: #C16039;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), color-stop(20%, #FFFFFF00));
-  background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF00 20%);
-  pointer-events: none;
-}
-
 .sixth h2 {
   font-family: 'Montserrat';
   font-weight: 700;
@@ -765,22 +777,34 @@ SECTION - SIXTH
 .sixth .grid-item,
 .sixth .grid-sizer {
   width: 100%;
-  margin-bottom: 32px;
 }
 
 @media screen and (min-width: 600px) {
   .sixth .grid-item,
   .sixth .grid-sizer {
     width: calc(50% - 24px);
-    margin-bottom: 48px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .sixth .grid-item,
   .sixth .grid-sizer {
-    /* 5 columns for larger screens */
     width: calc(33% - 20px);
+  }
+}
+
+.sixth .grid-item {
+  margin-bottom: 32px;
+}
+
+@media screen and (min-width: 600px) {
+  .sixth .grid-item {
+    margin-bottom: 48px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sixth .grid-item {
     margin-bottom: 40px;
   }
 }
@@ -848,7 +872,8 @@ footer .footer__container::before {
   height: 100%;
   top: 0;
   left: 0;
-  background: -webkit-linear-gradient(90deg, #000000 0%, #FFFFFF00 20%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#000000), color-stop(20%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 100%);
   pointer-events: none;
   z-index: 1;
 }
@@ -860,7 +885,8 @@ footer .footer__container::after {
   height: 100%;
   top: 0;
   left: 0;
-  background: -webkit-linear-gradient(-90deg, #000000 0%, #FFFFFF00 20%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#000000), color-stop(20%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 100%);
   pointer-events: none;
   z-index: 1;
 }
@@ -906,7 +932,7 @@ LAYERS
   .twitch__chat {
     display: block;
     position: fixed;
-    width: 320px;
+    width: 300px;
     top: 50%;
     right: -100%;
     -webkit-transform: translateY(-50%);
