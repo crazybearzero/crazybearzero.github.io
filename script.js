@@ -54,6 +54,7 @@ $(document).ready( function() {
   $('.js-close').on('click', function() {
     $('.layer__motiv').removeClass('-showLayer');
     $('.jebaited').hide();
+    $('body').removeClass('-overflow');
   });
 
   $(document).mouseup(function(e) {
@@ -145,6 +146,7 @@ function disapearTitle (elt, test) {
 
 function openlayer(showLayer) {
   $(showLayer).addClass('-showLayer');
+  $('body').addClass('-overflow');
 }
 
 var lFollowX = 0,
