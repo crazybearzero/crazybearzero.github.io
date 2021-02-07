@@ -377,8 +377,16 @@ INTRO
 	z-index: 1;
 	bottom: 30px;
 	left: 50%;
+	opacity: 0;
+	pointer-events: none;
 	transform: translateX(-50%);
 	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+
+	&.-arrowShow {
+		opacity: 1;
+		pointer-events: all;
+	}
 
 	svg {
 		animation: arrowbounce 1.5s infinite;
@@ -445,7 +453,7 @@ INTRO
 
 	p {
 		font-family: 'Montserrat';
-		font-size: 14px;
+		font-size: 11px;
 		color: $white;
 	}
 }
@@ -797,12 +805,14 @@ SECTION - FORTH
 			position: fixed;
 			top: 50%;
 			left: 50%;
+			margin-top: -154px;
 			margin-left: -75px;
 
 			@media screen and (min-width:768px) {
 				font-size: 520px;
 				line-height: 500px;
-				margin-top: -225px;
+				margin-top: -275px;
+				margin-left: -140px;
 			}
 		}
 	}
@@ -1061,7 +1071,7 @@ SECTION - SIXTH
 		background: $white;
 		padding: 16px;
 		border-radius: 20px;
-		border: 1px solid #777777;
+		border: 2px solid #666666;
 
 		.sixth__text {
 			font-family: 'Montserrat';

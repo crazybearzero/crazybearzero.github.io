@@ -369,9 +369,18 @@ INTRO
   z-index: 1;
   bottom: 30px;
   left: 50%;
+  opacity: 0;
+  pointer-events: none;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.intro__arrowdown.-arrowShow {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .intro__arrowdown svg {
@@ -447,7 +456,7 @@ INTRO
 
 .intro__banner p {
   font-family: 'Montserrat';
-  font-size: 14px;
+  font-size: 11px;
   color: #FFFFFF;
 }
 
@@ -818,6 +827,7 @@ SECTION - FORTH
   position: fixed;
   top: 50%;
   left: 50%;
+  margin-top: -154px;
   margin-left: -75px;
 }
 
@@ -825,7 +835,8 @@ SECTION - FORTH
   .forth .forth__number span {
     font-size: 520px;
     line-height: 500px;
-    margin-top: -225px;
+    margin-top: -275px;
+    margin-left: -140px;
   }
 }
 
@@ -1100,7 +1111,7 @@ SECTION - SIXTH
   background: #FFFFFF;
   padding: 16px;
   border-radius: 20px;
-  border: 1px solid #777777;
+  border: 2px solid #666666;
 }
 
 .sixth .sixth__solo .sixth__text {
