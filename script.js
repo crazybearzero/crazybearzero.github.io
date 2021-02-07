@@ -82,7 +82,7 @@ $(document).ready( function() {
 function openDoors() {
   $('.intro__bear').on('click', function() {
     $('.intro__left, .intro__right').addClass('-doorsOpened');
-    $('body').removeClass('-overflow');
+    $('body').removeClass('-overflowStart');
 
     setTimeout(function(){
       animName();
