@@ -392,7 +392,7 @@ SECTION - SECOND
 ************************/
 .second {
   position: relative;
-  padding: 120px 0;
+  min-height: 100vh;
   background: url("./img/binding_dark.png") center repeat;
 }
 
