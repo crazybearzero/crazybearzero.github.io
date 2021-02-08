@@ -874,9 +874,9 @@ SECTION - FIFTH
   height: 100%;
   top: 0;
   left: 0;
-  background: #d7c8a6;
-  background: -webkit-gradient(linear, left top, left bottom, from(#d7c8a6), color-stop(20%, rgba(0, 0, 0, 0.01)), to(rgba(0, 0, 0, 0.01)));
-  background: linear-gradient(180deg, #d7c8a6 0%, rgba(0, 0, 0, 0.01) 20%, rgba(0, 0, 0, 0.01) 100%);
+  background: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(20%, rgba(0, 0, 0, 0.01)), to(rgba(0, 0, 0, 0.01)));
+  background: linear-gradient(180deg, #ffffff 0%, rgba(0, 0, 0, 0.01) 20%, rgba(0, 0, 0, 0.01) 100%);
   pointer-events: none;
 }
 
@@ -887,9 +887,9 @@ SECTION - FIFTH
   height: 100%;
   top: 0;
   left: 0;
-  background: #d7c8a6;
-  background: -webkit-gradient(linear, left bottom, left top, from(#d7c8a6), color-stop(20%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
-  background: linear-gradient(0deg, #d7c8a6 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 100%);
+  background: #ffffff;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), color-stop(20%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(0deg, #ffffff 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 100%);
   pointer-events: none;
 }
 
@@ -1170,19 +1170,19 @@ footer .container {
 
 footer .footer__container {
   position: relative;
-  height: 500px;
+  height: 550px;
   overflow: hidden;
 }
 
 footer .footer__container::before {
   position: absolute;
   content: '';
-  width: 85%;
+  width: 80%;
   height: 100%;
   top: 0;
   left: 50%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#000000), color-stop(15%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
-  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#000000), color-stop(25%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 100%);
   pointer-events: none;
   z-index: 1;
   -webkit-transform: translateX(-50%);
@@ -1192,12 +1192,12 @@ footer .footer__container::before {
 footer .footer__container::after {
   position: absolute;
   content: '';
-  width: 85%;
+  width: 80%;
   height: 100%;
   top: 0;
   left: 50%;
-  background: -webkit-gradient(linear, left bottom, left top, from(#000000), color-stop(15%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
-  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0) 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#000000), color-stop(25%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 100%);
   pointer-events: none;
   z-index: 1;
   -webkit-transform: translateX(-50%);
@@ -1257,8 +1257,8 @@ LAYERS
     right: -100%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 1.2s ease-in-out;
+    transition: all 1.2s ease-in-out;
     z-index: 100px;
   }
   .twitch__chat.-showTwitch {

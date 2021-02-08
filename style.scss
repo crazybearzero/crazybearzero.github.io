@@ -850,10 +850,10 @@ SECTION - FIFTH
 		height: 100%;
 		top: 0;
 		left: 0;
-		background: #d7c8a6;
-		background: -webkit-linear-gradient(180deg, #d7c8a6 0%, rgba(0,0,0,0.01) 20%, rgba(0,0,0,0.01) 100%);
-		background: -moz-linear-gradient(180deg, #d7c8a6 0%, rgba(0,0,0,0.01) 20%, rgba(0,0,0,0.01) 100%);
-		background: linear-gradient(180deg, #d7c8a6 0%, rgba(0,0,0,0.01) 20%, rgba(0,0,0,0.01) 100%);
+		background: #ffffff;
+		background: -webkit-linear-gradient(180deg, #ffffff 0%, rgba(0,0,0,0.01) 20%, rgba(0,0,0,0.01) 100%);
+		background: -moz-linear-gradient(180deg, #ffffff 0%, rgba(0,0,0,0.01) 20%, rgba(0,0,0,0.01) 100%);
+		background: linear-gradient(180deg, #ffffff 0%, rgba(0,0,0,0.01) 20%, rgba(0,0,0,0.01) 100%);
 		pointer-events: none;
 	}
 
@@ -864,10 +864,10 @@ SECTION - FIFTH
 		height: 100%;
 		top: 0;
 		left: 0;
-		background: #d7c8a6;
-		background: -webkit-linear-gradient(0deg, #d7c8a6 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 100%);
-		background: -moz-linear-gradient(0deg, #d7c8a6 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 100%);
-		background: linear-gradient(0deg, #d7c8a6 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 100%);
+		background: #ffffff;
+		background: -webkit-linear-gradient(0deg, #ffffff 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 100%);
+		background: -moz-linear-gradient(0deg, #ffffff 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 100%);
+		background: linear-gradient(0deg, #ffffff 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 100%);
 		pointer-events: none;
 	}
 }
@@ -1129,19 +1129,19 @@ footer {
 
 	.footer__container {
 		position: relative;
-		height: 500px;
+		height: 550px;
 		overflow: hidden;
 
 		&::before {
 			position: absolute;
 			content: '';
-			width: 85%;
+			width: 80%;
 			height: 100%;
 			top: 0;
 			left: 50%;
-			background: -webkit-linear-gradient(180deg, #000000 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 100%);
-			background: -moz-linear-gradient(180deg, #000000 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 100%);
-			background: linear-gradient(180deg, #000000 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 100%);
+			background: -webkit-linear-gradient(180deg, #000000 0%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 100%);
+			background: -moz-linear-gradient(180deg, #000000 0%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 100%);
+			background: linear-gradient(180deg, #000000 0%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 100%);
 			pointer-events: none;
 			z-index: 1;
 			transform: translateX(-50%);
@@ -1150,13 +1150,13 @@ footer {
 		&::after {
 			position: absolute;
 			content: '';
-			width: 85%;
+			width: 80%;
 			height: 100%;
 			top: 0;
 			left: 50%;
-			background: -webkit-linear-gradient(0deg, #000000 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 100%);
-			background: -moz-linear-gradient(0deg, #000000 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 100%);
-			background: linear-gradient(0deg, #000000 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 100%);
+			background: -webkit-linear-gradient(0deg, #000000 0%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 100%);
+			background: -moz-linear-gradient(0deg, #000000 0%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 100%);
+			background: linear-gradient(0deg, #000000 0%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 100%);
 			pointer-events: none;
 			z-index: 1;
 			transform: translateX(-50%);
@@ -1213,7 +1213,7 @@ LAYERS
 		top: 50%;
 		right: -100%;
 		transform: translateY(-50%);
-		transition: all 0.5s ease-in-out;
+		transition: all 1.2s ease-in-out;
 		z-index: 100px;
 
 		&.-showTwitch {
