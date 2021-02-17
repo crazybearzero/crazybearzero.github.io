@@ -1196,6 +1196,7 @@ SECTION - SHIBASKI
 	justify-content: flex-start;
 	align-items: center;
 	background: $white;
+	padding: 60px 0;
 
 	&:before {
 		position: absolute;
@@ -1247,6 +1248,7 @@ SECTION - SHIBASKI
 		color: $black;
 		text-transform: uppercase;
 		margin-top: 24px;
+		margin-bottom: 24px;
 		font-size: 60px;
 	}
 }

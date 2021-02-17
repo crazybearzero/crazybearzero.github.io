@@ -1253,6 +1253,7 @@ SECTION - SHIBASKI
       -ms-flex-align: center;
           align-items: center;
   background: #FFFFFF;
+  padding: 60px 0;
 }
 
 .shibaski:before {
@@ -1305,6 +1306,7 @@ SECTION - SHIBASKI
   color: #000000;
   text-transform: uppercase;
   margin-top: 24px;
+  margin-bottom: 24px;
   font-size: 60px;
 }
 
