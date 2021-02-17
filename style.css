@@ -1549,6 +1549,10 @@ SECTION - SIXTH
   max-width: calc(100% - 50px);
 }
 
+.sixth .phone .message__solo div p {
+  margin-bottom: 8px;
+}
+
 .sixth .phone .message__solo div strong {
   font-size: 12px;
   display: block;

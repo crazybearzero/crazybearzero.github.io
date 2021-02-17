@@ -1449,6 +1449,10 @@ SECTION - SIXTH
 				display: inline-block;
 				max-width: calc(100% - 50px);
 
+				p {
+					margin-bottom: 8px;
+				}
+
 				strong {
 					font-size: 12px;
 					display: block;
