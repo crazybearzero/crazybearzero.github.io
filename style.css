@@ -797,7 +797,7 @@ SECTION - STREAMERS
 ************************/
 .streamers {
   position: relative;
-  background: #efedfb;
+  background: #FFFFFF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -986,7 +986,7 @@ SECTION - Funny
 ************************/
 .funny {
   min-height: 110vh;
-  background: #BEBEBE;
+  background: #FFFFFF;
   padding: 60px 0;
 }
 
@@ -1325,6 +1325,11 @@ SECTION - SIXTH
   left: 0;
   background: url("./img/dot-grid.png") center repeat;
   pointer-events: none;
+}
+
+.sixth audio {
+  position: relative;
+  z-index: -1;
 }
 
 .sixth h2 {
