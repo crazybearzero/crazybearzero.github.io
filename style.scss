@@ -102,6 +102,38 @@ html, body {
 	padding-bottom: 56.25%;
 	height: 0;
 
+	&.-squared {
+		width: 485px;
+		height: 402px;
+		text-align: center;
+		margin: 0 auto;
+
+		@media screen and (min-width: 769px) {
+			width: 650px;
+			height: 539px;
+		}
+
+		// @media screen and (min-width: 1024px) {
+		// 	width: 850px;
+		// 	height: 705px;
+		// }
+
+		iframe {
+			width: 485px;
+			height: 402px;
+
+			@media screen and (min-width: 769px) {
+				width: 650px;
+				height: 539px;
+			}
+
+			// @media screen and (min-width: 1024px) {
+			// 	width: 850px;
+			// 	height: 705px;
+			// }
+		}
+	}
+
 	object,
 	embed,
 	iframe {
@@ -709,6 +741,107 @@ SECTION - Sayundi
 		}
 	}
 }
+
+/************************
+SECTION - Lubus
+************************/
+.lubus {
+	position: relative;
+	min-height: 100vh;
+	background: $white;
+	background: url('./img/trees.png') center repeat;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	z-index: 0;
+	overflow: hidden;
+
+	.container {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+
+	h2 {
+		font-family: 'Montserrat';
+		font-weight: 700;
+		color: $black;
+		font-size: 34px;
+		margin-bottom: 40px;
+		text-align: center;
+
+		@media screen and (min-width:768px) {
+			font-size: 40px;
+			margin-bottom: 60px;
+		}
+	}
+}
+/************************
+SECTION - Tofu
+************************/
+.tofu {
+	position: relative;
+	min-height: 100vh;
+	background: $white;
+	background: url('./img/tic-tac-toe.png') center repeat;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	z-index: 0;
+	overflow: hidden;
+
+	.container {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+
+	h2 {
+		font-family: 'Montserrat';
+		font-weight: 700;
+		color: $black;
+		font-size: 34px;
+		margin-bottom: 40px;
+		text-align: center;
+
+		@media screen and (min-width:768px) {
+			font-size: 40px;
+			margin-bottom: 60px;
+		}
+	}
+}
+
+/************************
+SECTION - Sayundi 2
+************************/
+.sayunditwo {
+	position: relative;
+	min-height: 100vh;
+	background: $white;
+	background: url('./img/school.png') center repeat;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	z-index: 0;
+	overflow: hidden;
+
+	.container {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+
+	h2 {
+		font-family: 'Montserrat';
+		font-weight: 700;
+		color: $black;
+		font-size: 34px;
+		margin-bottom: 40px;
+		text-align: center;
+
+		@media screen and (min-width:768px) {
+			font-size: 40px;
+			margin-bottom: 60px;
+		}
+	}
+}
 /************************
 SECTION - THIRD
 ************************/
@@ -1257,6 +1390,7 @@ SECTION - SHIBASKI
 		.shibaski__left {
 			width: 200px;
 			border-radius: 20px;
+			overflow: hidden;
 
 			img {
 				width: 100%;

@@ -71,6 +71,7 @@ $(document).ready( function() {
     var container = $(".layer__motiv .left");
     if (!container.is(e.target) && container.has(e.target).length === 0) {
       $(".layer__motiv").removeClass('-showLayer');
+      $('body').removeClass('-overflow');
     }
   });
 
@@ -94,7 +95,7 @@ $(document).ready( function() {
 });
 
 function openDoors() {
-  $('.intro__bear').on('click', function() {
+  //$('.intro__bear').on('click', function() {
     $('.intro__left, .intro__right').addClass('-doorsOpened');
     
     setTimeout(function(){
@@ -110,8 +111,8 @@ function openDoors() {
       masonry();
       masonryFunny();
       getTodayDate();
-    }, 10000)
-  });
+    }, 200)
+  //});
 }
 
 function animName() {

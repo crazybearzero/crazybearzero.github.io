@@ -82,6 +82,32 @@ html.-overflowStart > .intro, body.-overflowStart > .intro {
   height: 0;
 }
 
+.video__container.-squared {
+  width: 485px;
+  height: 402px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 769px) {
+  .video__container.-squared {
+    width: 650px;
+    height: 539px;
+  }
+}
+
+.video__container.-squared iframe {
+  width: 485px;
+  height: 402px;
+}
+
+@media screen and (min-width: 769px) {
+  .video__container.-squared iframe {
+    width: 650px;
+    height: 539px;
+  }
+}
+
 .video__container object,
 .video__container embed,
 .video__container iframe {
@@ -742,6 +768,129 @@ SECTION - Sayundi
 }
 
 /************************
+SECTION - Lubus
+************************/
+.lubus {
+  position: relative;
+  min-height: 100vh;
+  background: #FFFFFF;
+  background: url("./img/trees.png") center repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.lubus .container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.lubus h2 {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  color: #000000;
+  font-size: 34px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .lubus h2 {
+    font-size: 40px;
+    margin-bottom: 60px;
+  }
+}
+
+/************************
+SECTION - Tofu
+************************/
+.tofu {
+  position: relative;
+  min-height: 100vh;
+  background: #FFFFFF;
+  background: url("./img/tic-tac-toe.png") center repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.tofu .container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.tofu h2 {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  color: #000000;
+  font-size: 34px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .tofu h2 {
+    font-size: 40px;
+    margin-bottom: 60px;
+  }
+}
+
+/************************
+SECTION - Sayundi 2
+************************/
+.sayunditwo {
+  position: relative;
+  min-height: 100vh;
+  background: #FFFFFF;
+  background: url("./img/school.png") center repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.sayunditwo .container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.sayunditwo h2 {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  color: #000000;
+  font-size: 34px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .sayunditwo h2 {
+    font-size: 40px;
+    margin-bottom: 60px;
+  }
+}
+
+/************************
 SECTION - THIRD
 ************************/
 .third, .fifth {
@@ -1340,6 +1489,7 @@ SECTION - SHIBASKI
 .shibaski .shibaski__content .shibaski__left {
   width: 200px;
   border-radius: 20px;
+  overflow: hidden;
 }
 
 .shibaski .shibaski__content .shibaski__left img {
