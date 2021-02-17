@@ -852,7 +852,7 @@ SECTION - Tofu
 /************************
 SECTION - Sayundi 2
 ************************/
-.sayunditwo {
+.mfs {
   position: relative;
   min-height: 100vh;
   background: #FFFFFF;
@@ -869,12 +869,12 @@ SECTION - Sayundi 2
   overflow: hidden;
 }
 
-.sayunditwo .container {
+.mfs .container {
   padding-top: 80px;
   padding-bottom: 80px;
 }
 
-.sayunditwo h2 {
+.mfs h2 {
   font-family: 'Montserrat';
   font-weight: 700;
   color: #000000;
@@ -884,7 +884,7 @@ SECTION - Sayundi 2
 }
 
 @media screen and (min-width: 768px) {
-  .sayunditwo h2 {
+  .mfs h2 {
     font-size: 40px;
     margin-bottom: 60px;
   }
