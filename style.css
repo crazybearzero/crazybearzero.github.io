@@ -83,28 +83,24 @@ html.-overflowStart > .intro, body.-overflowStart > .intro {
 }
 
 .video__container.-squared {
-  width: 485px;
-  height: 402px;
+  width: 300px;
+  height: 200px;
   text-align: center;
   margin: 0 auto;
+  padding-bottom: 0;
 }
 
 @media screen and (min-width: 769px) {
   .video__container.-squared {
     width: 650px;
-    height: 539px;
+    height: 620px;
   }
 }
 
-.video__container.-squared iframe {
-  width: 485px;
-  height: 402px;
-}
-
-@media screen and (min-width: 769px) {
-  .video__container.-squared iframe {
-    width: 650px;
-    height: 539px;
+@media screen and (min-width: 1024px) {
+  .video__container.-squared {
+    width: 850px;
+    height: 620px;
   }
 }
 
@@ -656,6 +652,7 @@ SECTION - SECOND
           align-items: center;
   z-index: 0;
   overflow: hidden;
+  padding: 100px 0;
 }
 
 .second::before {
@@ -744,6 +741,7 @@ SECTION - Sayundi
           align-items: center;
   z-index: 0;
   overflow: hidden;
+  padding: 100px 0;
 }
 
 .sayundi .container {
@@ -785,6 +783,7 @@ SECTION - Lubus
           align-items: center;
   z-index: 0;
   overflow: hidden;
+  padding: 100px 0;
 }
 
 .lubus .container {
@@ -826,6 +825,7 @@ SECTION - Tofu
           align-items: center;
   z-index: 0;
   overflow: hidden;
+  padding: 100px 0;
 }
 
 .tofu .container {
@@ -867,6 +867,7 @@ SECTION - Sayundi 2
           align-items: center;
   z-index: 0;
   overflow: hidden;
+  padding: 100px 0;
 }
 
 .mfs .container {
@@ -908,6 +909,7 @@ SECTION - THIRD
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 100px 0;
 }
 
 .third::before, .fifth::before {
@@ -1000,6 +1002,7 @@ SECTION - STREAMERS
           align-items: center;
   min-height: 100vh;
   overflow: hidden;
+  padding: 100px 0;
 }
 
 .streamers::before {
@@ -1487,9 +1490,17 @@ SECTION - SHIBASKI
 }
 
 .shibaski .shibaski__content .shibaski__left {
-  width: 200px;
+  width: 100%;
+  margin-bottom: 40px;
   border-radius: 20px;
   overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .shibaski .shibaski__content .shibaski__left {
+    width: 200px;
+    margin-bottom: 0;
+  }
 }
 
 .shibaski .shibaski__content .shibaski__left img {
@@ -1500,8 +1511,14 @@ SECTION - SHIBASKI
 }
 
 .shibaski .shibaski__content .shibaski__right {
-  width: calc(100% - 200px);
+  width: 100%;
   padding-left: 42px;
+}
+
+@media screen and (min-width: 768px) {
+  .shibaski .shibaski__content .shibaski__right {
+    width: calc(100% - 200px);
+  }
 }
 
 .shibaski .shibaski__first {
