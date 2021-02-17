@@ -380,7 +380,7 @@ function getTodayDate() {
   var day = d.getDate();
   var weekday = d.getDay();
 
-  var output = weekdayNames[weekday - 1] + ', ' + (day<10 ? '0' : '') + day + ' ' + monthNames[month - 1] + ', ' + d.getFullYear();
+  var output = weekdayNames[weekday - 1] + ' ' + (day<10 ? '0' : '') + day + ' ' + monthNames[month - 1] + ' ' + d.getFullYear();
 
   $('.message__date').html(output);
 }
