@@ -2,6 +2,7 @@ $white: #FFFFFF;
 $black: #000000;
 $black-40: rgba(0,0,0,0.4);
 $blue: #66aadd;
+$water: #efedfb;
 $yellow: #ffdd00;
 $foregroundDuration: 30s;
 $hillsDuration: 60s;
@@ -309,7 +310,7 @@ INTRO
 		width: 75px;
 		height: auto;
 		top: 80%;
-		left: 40%;
+		left: 23%;
 		transform: translateX(-50%) translateY(-50%);
 		display: block;
 	}
@@ -319,9 +320,37 @@ INTRO
 		width: 76px;
 		height: auto;
 		top: 78%;
-		left: 50%;
+		left: 33%;
 		transform: translateX(-50%) translateY(-50%);
 		display: block;
+	}
+
+	.bear_gif {
+    position: absolute;
+    width: 118px;
+    height: auto;
+    top: 83%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+	}
+
+	.fake_bear {
+		position: absolute;
+    width: 110px;
+    height: auto;
+    top: 77%;
+    left: 72%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+
+		.girl_running {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
 	}
 }
 
@@ -468,10 +497,15 @@ section {
 
 .left {
 	width: 100%;
-	
-	
+
 	@media screen and (min-width:1024px) {
 		width: 70%;
+	}
+	@media screen and (min-width:1200px) {
+		width: 75%;
+	}
+	@media screen and (min-width:1400px) {
+		width: 84%;
 	}
 }
 
@@ -490,11 +524,26 @@ section {
 SECTION - START
 ************************/
 .start {
-	padding: 60px 0;
+	position: relative;
+	padding: 60px 0 120px 0;
 	background: $white;
+	min-height: 100vh;
 
 	@media screen and (min-width:768px) {
-		padding: 120px;
+		padding: 120px 0 180px 0;
+	}
+
+	.bearwhat {
+		position: absolute;
+		width: 140px;
+		height: 140px;
+		left: 0;
+		bottom: 0;
+
+		@media screen and (min-width:768px) {
+			width: 200px;
+			height: 200px;
+		}
 	}
 
 	.particletext {
@@ -503,6 +552,7 @@ SECTION - START
 		height: 10px;
 		top: 0;
 		left: 0;
+		pointer-events: none;
 
 		&.confetti {
 			>.particle {
@@ -633,9 +683,12 @@ SECTION - THIRD
 ************************/
 .third, .fifth {
 	position: relative;
-	padding: 300px 0;
 	background: url('./img/pixel-heart.png') center repeat;
 	min-height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
 
 	&::before {
 		position: absolute;
@@ -644,11 +697,12 @@ SECTION - THIRD
 		height: 100%;
 		top: 0;
 		left: 0;
-		background: #f8aeae;
-		background: -webkit-linear-gradient(180deg, #f8aeae 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 100%);
-		background: -moz-linear-gradient(180deg, #f8aeae 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 100%);
-		background: linear-gradient(180deg, #f8aeae 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 100%);
+		background: #FFFFFF;
+		background: -webkit-linear-gradient(180deg, #FFFFFF 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 100%);
+		background: -moz-linear-gradient(180deg, #FFFFFF 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 100%);
+		background: linear-gradient(180deg, #FFFFFF 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 100%);
 		pointer-events: none;
+
 	}
 
 	&::after {
@@ -658,18 +712,15 @@ SECTION - THIRD
 		height: 100%;
 		top: 0;
 		left: 0;
-		background: #f8aeae;
-		background: -webkit-linear-gradient(0deg, #f8aeae 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 100%);
-		background: -moz-linear-gradient(0deg, #f8aeae 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 100%);
-		background: linear-gradient(0deg, #f8aeae 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 100%);
+		background: #FFFFFF;
+		background: -webkit-linear-gradient(0deg, #FFFFFF 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 100%);
+		background: -moz-linear-gradient(0deg, #FFFFFF 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 100%);
+		background: linear-gradient(0deg, #FFFFFF 0%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 100%);
 		pointer-events: none;
 	}
 
 	.container {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: flex-start;
-		align-items: center;
+		
 	}
 
 	.left {
@@ -712,11 +763,70 @@ SECTION - THIRD
 					margin-right: 0;
 				}
 			}
-			
 		}
 	}
 }
 
+/************************
+SECTION - STREAMERS
+************************/
+.streamers {
+	position: relative;
+	background: $white;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	overflow: hidden;
+
+	&::before {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: #efedfb;
+		background: -webkit-linear-gradient(0deg, #efedfb 0%, rgba(239,237,251,0) 15%, rgba(0,0,0,0) 100%);
+		background: -moz-linear-gradient(0deg, #efedfb 0%, rgba(239,237,251,0) 15%, rgba(0,0,0,0) 100%);
+		background: linear-gradient(0deg, #efedfb 0%, rgba(239,237,251,0) 15%, rgba(0,0,0,0) 100%);
+		pointer-events: none;
+		z-index: 1;
+	}
+
+	.particletext {
+		position: absolute;
+		width: 98%;
+		height: 100%;
+		bottom: 0;
+		left: 0;
+		pointer-events: none;
+
+		&.bubbles {
+			 >.particle {
+					opacity:0;
+					position: absolute;
+					animation: bubbles 1.5s ease-in infinite;
+			 }
+		}
+	}
+
+	h2 {
+		font-family: 'Montserrat';
+		font-weight: 700;
+		color: $black;
+		font-size: 34px;
+		margin-bottom: 40px;
+		text-align: center;
+
+		@media screen and (min-width:768px) {
+			font-size: 40px;
+			margin-bottom: 60px;
+		}
+	}
+	
+}
 
 /************************
 SECTION - FORTH
@@ -752,9 +862,9 @@ SECTION - FORTH
 			content: '';
 			top: 0;
 			left: 0;
-			width: 3%;
+			width: 4%;
 			height: 100%;
-			background: #CECECE;
+			background: #E8E8E8;
 			display: block;
 		}
 
@@ -762,8 +872,8 @@ SECTION - FORTH
 			position: absolute;
 			content: '';
 			top: 0;
-			left: 3%;
-			width: 3%;
+			left: 4%;
+			width: 4%;
 			height: 100%;
 			background: #DDDD00;
 			display: block;
@@ -836,6 +946,73 @@ SECTION - FORTH
 	}
 }
 
+
+/************************
+SECTION - Funny
+************************/
+.funny {
+	min-height: 110vh;
+	background: $white;
+	padding: 60px 0;
+
+	@media screen and (min-width:768px) {
+		padding: 120px 0;
+	}
+
+	.container {
+		.left {
+			h2 {
+				font-family: 'Montserrat';
+				font-weight: 700;
+				color: $black;
+				font-size: 34px;
+				margin-bottom: 40px;
+				text-align: center;
+		
+				@media screen and (min-width:768px) {
+					font-size: 40px;
+					margin-bottom: 60px;
+				}
+			}
+
+			.grid-item,
+			.grid-sizer {
+				width: 100%;
+				
+				@media screen and (min-width: 600px) {
+					width: calc(50% - 24px);
+				}
+
+				@media screen and (min-width: 1300px) {
+					width: calc(33% - 20px);
+				}
+			}
+	
+			.grid-item {
+				margin-bottom: 32px;
+
+				@media screen and (min-width: 600px) {
+					margin-bottom: 48px;
+				}
+
+				@media screen and (min-width: 768px) {
+					margin-bottom: 32px;
+				}
+			}
+
+			.funny__solo {
+				border-radius: 20px;
+				overflow: hidden;
+
+				img {
+					width: 100%;
+					height: auto;
+					display: block;
+				}
+			}
+		}
+	}
+}
 
 /************************
 SECTION - FIFTH
@@ -1009,6 +1186,72 @@ SECTION - IMPOSSIBLE
 }
 
 /************************
+SECTION - SHIBASKI
+************************/
+.shibaski {
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	background: $white;
+
+	&:before {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 33%;
+		top: 33%;
+		left: 0;
+		background: blue;
+		z-index: 0;
+	}
+
+	&:after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 33%;
+		top: 66%;
+		left: 0;
+		background: red;
+		z-index: 0;
+	}
+
+	.left {
+		position: relative;
+		z-index: 1;
+		text-align: center;
+
+		img {
+			max-width: 400px;
+			height: auto;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	
+	.shibaski__first {
+		font-family: 'Montserrat';
+		font-weight: 700;
+		color: $black;
+		text-transform: uppercase;
+		margin-bottom: 24px;
+		font-size: 40px;
+	}
+
+	.shibaski__second {
+		font-family: 'Montserrat';
+		font-weight: 700;
+		color: $black;
+		text-transform: uppercase;
+		margin-top: 24px;
+		font-size: 60px;
+	}
+}
+
+/************************
 SECTION - SIXTH
 ************************/
 .sixth {
@@ -1026,6 +1269,11 @@ SECTION - SIXTH
 		pointer-events: none;
 	}
 
+	audio {
+		position: relative;
+		z-index: -1;
+	}
+
 	h2 {
 		font-family: 'Montserrat';
 		font-weight: 700;
@@ -1040,6 +1288,180 @@ SECTION - SIXTH
 		}
 	}
 
+	.phone {
+		position: relative;
+		width: 300px;
+		margin: 0 auto 60px auto;
+
+		@media screen and (min-width:768px) {
+			width: 400px;
+		}
+
+		img {
+			position: relative;
+			width: 100%;
+			height: auto;
+			display: block;
+			margin: 0 auto;
+			z-index: 1;
+			pointer-events: none;
+		}
+
+		.messages__interface {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: $white;
+		}
+
+		.messages__interface__top {
+			height: 98px;
+			padding-top: 20px;
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			align-items: center;
+			padding: 52px 20px 20px 20px;
+		}
+
+		.messages__interface__top__first {
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			align-items: center;
+
+			svg {
+				width: 20px;
+				height: 20px;
+			}
+
+			.messages__interface__name {
+				font-family: 'Montserrat';
+				font-weight: 700;
+				color: $black;
+				letter-spacing: 0.4px;
+				font-size: 14px;
+				line-height: 12px;
+				padding-left: 16px;
+
+				span {
+					font-size: 10px;
+					font-weight: 400;
+					line-height: 10px;
+					letter-spacing: 0;
+					opacity: 0.6;
+				}
+			}
+		}
+
+		.messages__interface__top__second {
+			svg {
+				width: 20px;
+				height: 20px;
+				margin-left: 12px;
+				display: inline-block;
+			}
+		}
+
+		.message__space {
+			height: calc(100% - 189px);
+			padding: 0px 28px 20px 28px;
+			overflow-y: auto;
+		}
+
+		.message__date {
+			font-family: 'Montserrat';
+			font-weight: 700;
+			font-size: 11px;
+			color: $black;
+			opacity: 0.4;
+			text-align: center;
+			padding: 16px 0 20px 0;
+		}
+
+		.message__solo {
+			div {
+				font-family: 'Montserrat';
+				font-size: 14px;
+				border-radius: 24px;
+				background: #D7D7D7;
+				margin-bottom: 24px;
+				padding: 12px 16px;
+				display: inline-block;
+				max-width: calc(100% - 50px);
+
+				strong {
+					font-size: 12px;
+					display: block;
+					margin-top: 4px;
+					font-style: italic;
+				}
+			}
+
+			&.-right {
+				text-align: right;
+
+				div {
+					color: $white;
+					background: #880000;
+					align-self: flex-end;
+				}
+			}
+		}
+
+		.message__end {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			height: 96px;
+			padding: 12px 28px 35px 28px;
+		}
+
+		.message__end__left {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: center;
+			background: #E6E6E6;
+			border-radius: 30px;
+			width: calc(100% - 50px);
+			padding: 12px 12px;
+
+			svg {
+				width: 16px;
+				height: 16px;
+				margin-right: 12px;
+			}
+
+			span {
+				font-family: 'Montserrat';
+				font-size: 13px;
+				font-style: italic;
+			}
+		}
+
+		.message__end__svg {
+			background: #00CACA;
+			padding: 10px 9px 9px 8px;
+			border-radius: 100%;
+
+			svg {
+				width: 20px;
+				height: 20px;
+				display: block;
+			}
+		}
+
+		.messages_emotes {
+			font-size: 35px;
+			text-align: center;
+		}
+		
+	}
+
 	.grid-item,
 	.grid-sizer {
 		width: 100%;
@@ -1052,9 +1474,7 @@ SECTION - SIXTH
 			width: calc(33% - 20px);
 		}
 	}
-
 	
-
 	.grid-item {
 		margin-bottom: 32px;
 
@@ -1121,6 +1541,8 @@ footer {
 		height: 100%;
 		top: 0;
 		left: 0;
+		z-index: 1;
+		pointer-events: none;
 	}
 
 	.container {
@@ -1214,7 +1636,7 @@ LAYERS
 		right: -100%;
 		transform: translateY(-50%);
 		transition: all 1.2s ease-in-out;
-		z-index: 100px;
+		z-index: 100;
 
 		&.-showTwitch {
 			right: 0;
@@ -1237,6 +1659,7 @@ LAYERS
 	pointer-events: none;
 	background: $black-40;
 	transition: all 0.14s ease-in-out;
+	z-index: 1001;
 
 	&.-showLayer {
 		opacity: 1;
@@ -1246,9 +1669,9 @@ LAYERS
 	&.layer__motivtwo {
 		.container {
 			img {
-				height: 60vh;
-				width: auto;
-				margin: 0 auto;
+				width: 100%;
+				height: auto;
+				display: block;
 			}
 		}
 	}
@@ -1276,9 +1699,9 @@ LAYERS
 		}
 
 		img {
-			width: 100%;
-			height: auto;
-			display: block;
+			height: 60vh;
+			width: auto;
+			margin: 0 auto;
 
 			&.jebaited {
 				width: 160px;
@@ -1311,10 +1734,10 @@ ANIMATION
 @keyframes credits {
   0% {
 		opacity: 0;
-		transform:translateY(100%); }
+		transform:translateY(95%); }
 	1% {
 		opacity: 1;
-		transform:translateY(100%); }
+		transform:translateY(95%); }
   98% {
     transform: translateY(-100%); }
 	99% {
@@ -1343,4 +1766,19 @@ ANIMATION
 	100% {
 		 opacity:0;
 		 transform:translateY(100vh) rotate(1440deg); }
+}
+
+@keyframes bubbles {
+	0% {
+		 opacity: 0;
+		 transform:translate(0, 0%);
+	}
+	20% { //show and hint at moving
+		 opacity: 1;
+		 transform:translate(0, -30%);
+	}
+	100% {
+		 opacity: 0;
+		 transform:translate(0, -200%); //Big bubbles move faster
+	}
 }
