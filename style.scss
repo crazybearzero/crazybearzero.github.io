@@ -750,10 +750,6 @@ SECTION - THIRD
 		pointer-events: none;
 	}
 
-	.container {
-		
-	}
-
 	.left {
 		text-align: center;
 
@@ -1834,13 +1830,13 @@ ANIMATION
 		 opacity: 0;
 		 transform:translate(0, 0%);
 	}
-	20% { //show and hint at moving
+	20% {
 		 opacity: 1;
 		 transform:translate(0, -30%);
 	}
 	100% {
 		 opacity: 0;
-		 transform:translate(0, -200%); //Big bubbles move faster
+		 transform:translate(0, -200%);
 	}
 }
 
@@ -1848,7 +1844,7 @@ ANIMATION
 	0% {
 		color: $black
 	}
-	15% { //show and hint at moving
+	15% {
 		color: yellow;
 	}
 	30% {
