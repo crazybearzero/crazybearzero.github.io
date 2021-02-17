@@ -456,7 +456,7 @@ INTRO
 
 .replay span {
   font-family: 'Montserrat';
-  font-style: 13px;
+  font-style: 10px;
   color: #FFFFFF;
   display: inline-block;
   margin-right: 8px;
@@ -465,8 +465,8 @@ INTRO
 }
 
 .replay svg {
-  width: 20px;
-  height: 20px;
+  width: 14px;
+  height: 14px;
   display: inline-block;
 }
 
@@ -696,6 +696,46 @@ SECTION - SECOND
 
 @media screen and (min-width: 768px) {
   .second h2 {
+    font-size: 40px;
+    margin-bottom: 60px;
+  }
+}
+
+/************************
+SECTION - Sayundi
+************************/
+.sayundi {
+  position: relative;
+  min-height: 100vh;
+  background: url("./img/doodles.png") center repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.sayundi .container {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.sayundi h2 {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  color: #000000;
+  font-size: 34px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .sayundi h2 {
     font-size: 40px;
     margin-bottom: 60px;
   }
@@ -1299,6 +1339,7 @@ SECTION - SHIBASKI
 
 .shibaski .shibaski__content .shibaski__left {
   width: 200px;
+  border-radius: 20px;
 }
 
 .shibaski .shibaski__content .shibaski__left img {
@@ -1339,7 +1380,12 @@ SECTION - SHIBASKI
   font-size: 24px;
 }
 
-.shibaski .shibaski__second span {
+.shibaski .shibaski__second .rgb {
+  -webkit-animation: argibe 5s linear infinite;
+          animation: argibe 5s linear infinite;
+}
+
+.shibaski .shibaski__second .smol {
   font-size: 17px;
   font-style: italic;
 }
@@ -1911,50 +1957,50 @@ ANIMATION
 @-webkit-keyframes credits {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(95%);
-            transform: translateY(95%);
+    -webkit-transform: translateY(90%);
+            transform: translateY(90%);
   }
   1% {
     opacity: 1;
-    -webkit-transform: translateY(95%);
-            transform: translateY(95%);
+    -webkit-transform: translateY(90%);
+            transform: translateY(90%);
   }
   98% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(-95%);
+            transform: translateY(-95%);
   }
   99% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(-95%);
+            transform: translateY(-95%);
   }
 }
 
 @keyframes credits {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(95%);
-            transform: translateY(95%);
+    -webkit-transform: translateY(90%);
+            transform: translateY(90%);
   }
   1% {
     opacity: 1;
-    -webkit-transform: translateY(95%);
-            transform: translateY(95%);
+    -webkit-transform: translateY(90%);
+            transform: translateY(90%);
   }
   98% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(-95%);
+            transform: translateY(-95%);
   }
   99% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(-95%);
+            transform: translateY(-95%);
   }
 }
 
@@ -2061,6 +2107,60 @@ ANIMATION
     opacity: 0;
     -webkit-transform: translate(0, -200%);
             transform: translate(0, -200%);
+  }
+}
+
+@-webkit-keyframes argibe {
+  0% {
+    color: #000000;
+  }
+  15% {
+    color: yellow;
+  }
+  30% {
+    color: orange;
+  }
+  45% {
+    color: red;
+  }
+  60% {
+    color: green;
+  }
+  75% {
+    color: blue;
+  }
+  85% {
+    color: purple;
+  }
+  100% {
+    color: #000000;
+  }
+}
+
+@keyframes argibe {
+  0% {
+    color: #000000;
+  }
+  15% {
+    color: yellow;
+  }
+  30% {
+    color: orange;
+  }
+  45% {
+    color: red;
+  }
+  60% {
+    color: green;
+  }
+  75% {
+    color: blue;
+  }
+  85% {
+    color: purple;
+  }
+  100% {
+    color: #000000;
   }
 }
 /*# sourceMappingURL=style.css.map */

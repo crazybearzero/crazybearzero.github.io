@@ -456,7 +456,7 @@ INTRO
 
 	span {
 		font-family: 'Montserrat';
-		font-style: 13px;
+		font-style: 10px;
 		color: $white;
 		display: inline-block;
 		margin-right: 8px;
@@ -464,8 +464,8 @@ INTRO
 	}
 
 	svg {
-		width: 20px;
-		height: 20px;
+		width: 14px;
+		height: 14px;
 		display: inline-block;
 
 		path {
@@ -677,7 +677,38 @@ SECTION - SECOND
 	}
 }
 
+/************************
+SECTION - Sayundi
+************************/
+.sayundi {
+	position: relative;
+	min-height: 100vh;
+	background: url('./img/doodles.png') center repeat;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	z-index: 0;
+	overflow: hidden;
 
+	.container {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+
+	h2 {
+		font-family: 'Montserrat';
+		font-weight: 700;
+		color: $black;
+		font-size: 34px;
+		margin-bottom: 40px;
+		text-align: center;
+
+		@media screen and (min-width:768px) {
+			font-size: 40px;
+			margin-bottom: 60px;
+		}
+	}
+}
 /************************
 SECTION - THIRD
 ************************/
@@ -1200,28 +1231,6 @@ SECTION - SHIBASKI
 	background-position: center;
 	background-size: 50px auto;
 
-	// &:before {
-	// 	position: absolute;
-	// 	content: '';
-	// 	width: 100%;
-	// 	height: 33%;
-	// 	top: 33%;
-	// 	left: 0;
-	// 	background: #0072CE;
-	// 	z-index: 0;
-	// }
-
-	// &:after {
-	// 	position: absolute;
-	// 	content: '';
-	// 	width: 100%;
-	// 	height: 33%;
-	// 	top: 66%;
-	// 	left: 0;
-	// 	background: #EF3340;
-	// 	z-index: 0;
-	// }
-
 	.left {
 		position: relative;
 		z-index: 1;
@@ -1251,6 +1260,7 @@ SECTION - SHIBASKI
 
 		.shibaski__left {
 			width: 200px;
+			border-radius: 20px;
 
 			img {
 				width: 100%;
@@ -1291,7 +1301,11 @@ SECTION - SHIBASKI
 		text-transform: uppercase;
 		font-size: 24px;
 
-		span {
+		.rgb {
+			animation: argibe 5s linear infinite;
+		}
+
+		.smol {
 			font-size: 17px;
 			font-style: italic;
 		}
@@ -1781,17 +1795,17 @@ ANIMATION
 @keyframes credits {
   0% {
 		opacity: 0;
-		transform:translateY(95%); }
+		transform:translateY(90%); }
 	1% {
 		opacity: 1;
-		transform:translateY(95%); }
+		transform:translateY(90%); }
   98% {
-    transform: translateY(-100%); }
+    transform: translateY(-95%); }
 	99% {
 		opacity: 1; }
 	100% {
 		opacity: 0;
-		transform: translateY(-100%); }
+		transform: translateY(-95%); }
 }
 
 @keyframes lulw {
@@ -1827,5 +1841,32 @@ ANIMATION
 	100% {
 		 opacity: 0;
 		 transform:translate(0, -200%); //Big bubbles move faster
+	}
+}
+
+@keyframes argibe {
+	0% {
+		color: $black
+	}
+	15% { //show and hint at moving
+		color: yellow;
+	}
+	30% {
+		color: orange;
+	}
+	45% {
+		color: red;
+	}
+	60% {
+		color: green;
+	}
+	75% {
+		color: blue;
+	}
+	85% {
+		color: purple;
+	}
+	100% {
+		color: $black
 	}
 }
