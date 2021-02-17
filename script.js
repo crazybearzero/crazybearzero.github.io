@@ -95,7 +95,7 @@ $(document).ready( function() {
 });
 
 function openDoors() {
-  //$('.intro__bear').on('click', function() {
+  $('.intro__bear').on('click', function() {
     $('.intro__left, .intro__right').addClass('-doorsOpened');
     
     setTimeout(function(){
@@ -111,8 +111,8 @@ function openDoors() {
       masonry();
       masonryFunny();
       getTodayDate();
-    }, 200)
-  //});
+    }, 10000)
+  });
 }
 
 function animName() {
