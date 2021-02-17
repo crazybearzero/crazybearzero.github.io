@@ -1060,8 +1060,6 @@ SECTION - IMPOSSIBLE
 	overflow: hidden;
 	background: $black;
 
-
-
 	.impossible__bg {
 		position: absolute;
 		width: 100%;
@@ -1196,40 +1194,75 @@ SECTION - SHIBASKI
 	justify-content: flex-start;
 	align-items: center;
 	background: $white;
-	padding: 60px 0;
+	padding: 200px 0;
+	background-image: url('./img/dot-grid.png');
+	background-repeat: repeat;
+	background-position: center;
+	background-size: 50px auto;
 
-	&:before {
-		position: absolute;
-		content: '';
-		width: 100%;
-		height: 33%;
-		top: 33%;
-		left: 0;
-		background: blue;
-		z-index: 0;
-	}
+	// &:before {
+	// 	position: absolute;
+	// 	content: '';
+	// 	width: 100%;
+	// 	height: 33%;
+	// 	top: 33%;
+	// 	left: 0;
+	// 	background: #0072CE;
+	// 	z-index: 0;
+	// }
 
-	&:after {
-		position: absolute;
-		content: '';
-		width: 100%;
-		height: 33%;
-		top: 66%;
-		left: 0;
-		background: red;
-		z-index: 0;
-	}
+	// &:after {
+	// 	position: absolute;
+	// 	content: '';
+	// 	width: 100%;
+	// 	height: 33%;
+	// 	top: 66%;
+	// 	left: 0;
+	// 	background: #EF3340;
+	// 	z-index: 0;
+	// }
 
 	.left {
 		position: relative;
 		z-index: 1;
-		text-align: center;
 
-		img {
-			max-width: 400px;
-			height: auto;
-			display: block;
-			margin: 0 auto;
+		h2{
+			font-family: 'Montserrat';
+			font-size: 34px;
+			color: $black;
+			top: 20px;
+			text-align: center;
+			z-index: 1;
+			text-align: center;
+	
+			@media screen and (min-width:768px) {
+				font-size: 46px;
+			}
+		}
+	}
+
+	.shibaski__content {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: flex-start;
+		margin-top: 60px;
+		margin-bottom: 42px;
+
+		.shibaski__left {
+			width: 200px;
+
+			img {
+				width: 100%;
+				height: auto;
+				display: block;
+				margin: 0 auto;
+			}
+		}
+
+		.shibaski__right {
+			width: calc(100% - 200px);
+			padding-left: 42px;
 		}
 	}
 	
@@ -1238,8 +1271,17 @@ SECTION - SHIBASKI
 		font-weight: 700;
 		color: $black;
 		text-transform: uppercase;
+		font-size: 38px;
+	}
+
+	.shibaski__quote {
+		font-family: 'Montserrat';
+		font-weight: 700;
+		font-style: italic;
+		color: $black;
+		text-transform: uppercase;
 		margin-bottom: 24px;
-		font-size: 40px;
+		font-size: 16px;
 	}
 
 	.shibaski__second {
@@ -1247,9 +1289,7 @@ SECTION - SHIBASKI
 		font-weight: 700;
 		color: $black;
 		text-transform: uppercase;
-		margin-top: 24px;
-		margin-bottom: 24px;
-		font-size: 60px;
+		font-size: 24px;
 	}
 }
 

@@ -1253,42 +1253,64 @@ SECTION - SHIBASKI
       -ms-flex-align: center;
           align-items: center;
   background: #FFFFFF;
-  padding: 60px 0;
-}
-
-.shibaski:before {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 33%;
-  top: 33%;
-  left: 0;
-  background: blue;
-  z-index: 0;
-}
-
-.shibaski:after {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 33%;
-  top: 66%;
-  left: 0;
-  background: red;
-  z-index: 0;
+  padding: 200px 0;
+  background-image: url("./img/dot-grid.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 50px auto;
 }
 
 .shibaski .left {
   position: relative;
   z-index: 1;
+}
+
+.shibaski .left h2 {
+  font-family: 'Montserrat';
+  font-size: 34px;
+  color: #000000;
+  top: 20px;
+  text-align: center;
+  z-index: 1;
   text-align: center;
 }
 
-.shibaski .left img {
-  max-width: 400px;
+@media screen and (min-width: 768px) {
+  .shibaski .left h2 {
+    font-size: 46px;
+  }
+}
+
+.shibaski .shibaski__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 60px;
+  margin-bottom: 42px;
+}
+
+.shibaski .shibaski__content .shibaski__left {
+  width: 200px;
+}
+
+.shibaski .shibaski__content .shibaski__left img {
+  width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
+}
+
+.shibaski .shibaski__content .shibaski__right {
+  width: calc(100% - 200px);
+  padding-left: 42px;
 }
 
 .shibaski .shibaski__first {
@@ -1296,8 +1318,17 @@ SECTION - SHIBASKI
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+  font-size: 38px;
+}
+
+.shibaski .shibaski__quote {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-style: italic;
+  color: #000000;
+  text-transform: uppercase;
   margin-bottom: 24px;
-  font-size: 40px;
+  font-size: 16px;
 }
 
 .shibaski .shibaski__second {
@@ -1305,9 +1336,7 @@ SECTION - SHIBASKI
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
-  margin-top: 24px;
-  margin-bottom: 24px;
-  font-size: 60px;
+  font-size: 24px;
 }
 
 /************************
