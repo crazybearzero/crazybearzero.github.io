@@ -1339,6 +1339,11 @@ SECTION - SHIBASKI
   font-size: 24px;
 }
 
+.shibaski .shibaski__second span {
+  font-size: 17px;
+  font-style: italic;
+}
+
 /************************
 SECTION - SIXTH
 ************************/

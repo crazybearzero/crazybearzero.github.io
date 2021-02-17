@@ -1290,6 +1290,11 @@ SECTION - SHIBASKI
 		color: $black;
 		text-transform: uppercase;
 		font-size: 24px;
+
+		span {
+			font-size: 17px;
+			font-style: italic;
+		}
 	}
 }
 
