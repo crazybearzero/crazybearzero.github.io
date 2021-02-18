@@ -2071,6 +2071,52 @@ LAYERS
   display: none;
 }
 
+.layer__ad {
+  position: fixed;
+  width: 360px;
+  height: auto;
+  left: -380px;
+  bottom: 15px;
+  background: #114466;
+  border-top: 2px solid #55AADD;
+  padding: 50px 24px 32px 24px;
+  pointer-events: none;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  z-index: 100;
+}
+
+.layer__ad.-adshow {
+  left: 15px;
+  pointer-events: all;
+}
+
+.layer__ad .layer__ad__close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 12px;
+  right: 12px;
+  background: url("./img/icon_close.svg") no-repeat center;
+  background-size: 60%;
+  cursor: pointer;
+}
+
+.layer__ad .layer__ad__title {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  color: #FFFFFF;
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+.layer__ad .layer__ad__content {
+  font-family: 'Montserrat';
+  color: #FFFFFF;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
 /************************
 ANIMATION
 ************************/

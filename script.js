@@ -37,6 +37,12 @@ $(document).ready( function() {
       }
     });
 
+    $(".shibaski").each(function() {
+      if (isScrolledIntoView($(this))) {
+        $('.layer__ad').addClass("-adshow");
+      }
+    });
+
     $(".sixth .phone").each(function() {
       if(audioTest == false) {
         if (isScrolledIntoView($(this))) {     
@@ -65,6 +71,10 @@ $(document).ready( function() {
     $('.layer__motiv').removeClass('-showLayer');
     $('.jebaited').hide();
     $('body').removeClass('-overflow');
+  });
+
+  $('.layer__ad__close').on('click', function() {
+    $('.layer__ad').removeClass("-adshow");
   });
 
   $(document).mouseup(function(e) {
