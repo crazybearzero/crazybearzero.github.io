@@ -1993,17 +1993,17 @@ ANIMATION
 @keyframes credits {
   0% {
 		opacity: 0;
-		transform:translateY(85%); }
+		transform:translateY(95%); }
 	1% {
 		opacity: 1;
-		transform:translateY(85%); }
+		transform:translateY(95%); }
   98% {
-    transform: translateY(-90%); }
+    transform: translateY(-100%); }
 	99% {
 		opacity: 1; }
 	100% {
 		opacity: 0;
-		transform: translateY(-90%); }
+		transform: translateY(-100%); }
 }
 
 @keyframes lulw {
