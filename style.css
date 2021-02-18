@@ -2073,12 +2073,12 @@ LAYERS
 
 .layer__ad {
   position: fixed;
-  width: 360px;
+  width: 370px;
   height: auto;
-  left: -380px;
+  left: -390px;
   bottom: 15px;
   background: #114466;
-  border-top: 2px solid #55AADD;
+  border-top: 2px solid #57AADD;
   padding: 50px 24px 32px 24px;
   pointer-events: none;
   -webkit-transition: all 0.5s ease-in-out;
