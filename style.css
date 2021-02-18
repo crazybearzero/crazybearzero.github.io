@@ -93,14 +93,14 @@ html.-overflowStart > .intro, body.-overflowStart > .intro {
 @media screen and (min-width: 769px) {
   .video__container.-squared {
     width: 650px;
-    height: 620px;
+    height: 680px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .video__container.-squared {
     width: 850px;
-    height: 620px;
+    height: 680px;
   }
 }
 
