@@ -1799,7 +1799,7 @@ footer {
 
 		&.-reveal {
 			.credits {
-				animation: credits 24s linear infinite;
+				animation: credits 38s linear infinite;
 			}
 		}
 	}
@@ -1993,17 +1993,17 @@ ANIMATION
 @keyframes credits {
   0% {
 		opacity: 0;
-		transform:translateY(90%); }
+		transform:translateY(85%); }
 	1% {
 		opacity: 1;
-		transform:translateY(90%); }
+		transform:translateY(85%); }
   98% {
-    transform: translateY(-95%); }
+    transform: translateY(-90%); }
 	99% {
 		opacity: 1; }
 	100% {
 		opacity: 0;
-		transform: translateY(-95%); }
+		transform: translateY(-90%); }
 }
 
 @keyframes lulw {

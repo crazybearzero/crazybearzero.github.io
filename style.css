@@ -1936,8 +1936,8 @@ footer .footer__container::after {
 }
 
 footer .footer__container.-reveal .credits {
-  -webkit-animation: credits 24s linear infinite;
-          animation: credits 24s linear infinite;
+  -webkit-animation: credits 38s linear infinite;
+          animation: credits 38s linear infinite;
 }
 
 footer .credits {
@@ -2174,50 +2174,50 @@ ANIMATION
 @-webkit-keyframes credits {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(90%);
-            transform: translateY(90%);
+    -webkit-transform: translateY(85%);
+            transform: translateY(85%);
   }
   1% {
     opacity: 1;
-    -webkit-transform: translateY(90%);
-            transform: translateY(90%);
+    -webkit-transform: translateY(85%);
+            transform: translateY(85%);
   }
   98% {
-    -webkit-transform: translateY(-95%);
-            transform: translateY(-95%);
+    -webkit-transform: translateY(-90%);
+            transform: translateY(-90%);
   }
   99% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    -webkit-transform: translateY(-95%);
-            transform: translateY(-95%);
+    -webkit-transform: translateY(-90%);
+            transform: translateY(-90%);
   }
 }
 
 @keyframes credits {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(90%);
-            transform: translateY(90%);
+    -webkit-transform: translateY(85%);
+            transform: translateY(85%);
   }
   1% {
     opacity: 1;
-    -webkit-transform: translateY(90%);
-            transform: translateY(90%);
+    -webkit-transform: translateY(85%);
+            transform: translateY(85%);
   }
   98% {
-    -webkit-transform: translateY(-95%);
-            transform: translateY(-95%);
+    -webkit-transform: translateY(-90%);
+            transform: translateY(-90%);
   }
   99% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    -webkit-transform: translateY(-95%);
-            transform: translateY(-95%);
+    -webkit-transform: translateY(-90%);
+            transform: translateY(-90%);
   }
 }
 
