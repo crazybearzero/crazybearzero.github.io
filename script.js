@@ -22,6 +22,7 @@ $(document).ready( function() {
   });
 
   var audioTest = false;
+  var adTest = false;
   $(window).scroll(function (event) {
     var viewportHeight = $(window).height();
     var scroll = $(window).scrollTop();
@@ -38,8 +39,11 @@ $(document).ready( function() {
     });
 
     $(".shibaski").each(function() {
-      if (isScrolledIntoView($(this))) {
-        $('.layer__ad').addClass("-adshow");
+      if(adTest == false) {
+        if (isScrolledIntoView($(this))) {
+          $('.layer__ad').addClass("-adshow");
+        }
+        adTest = true;
       }
     });
 
