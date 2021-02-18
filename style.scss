@@ -955,10 +955,10 @@ SECTION - STREAMERS
 		height: 100%;
 		top: 0;
 		left: 0;
-		background: #efedfb;
-		background: -webkit-linear-gradient(0deg, #efedfb 0%, rgba(239,237,251,0) 15%, rgba(0,0,0,0) 100%);
-		background: -moz-linear-gradient(0deg, #efedfb 0%, rgba(239,237,251,0) 15%, rgba(0,0,0,0) 100%);
-		background: linear-gradient(0deg, #efedfb 0%, rgba(239,237,251,0) 15%, rgba(0,0,0,0) 100%);
+		background: #ffffff;
+		background: -webkit-linear-gradient(0deg, #ffffff 0%, rgba(255,255,255,0) 15%, rgba(0,0,0,0) 100%);
+		background: -moz-linear-gradient(0deg, #ffffff 0%, rgba(255,255,255,0) 15%, rgba(0,0,0,0) 100%);
+		background: linear-gradient(0deg, #ffffff 0%, rgba(255,255,255,0) 15%, rgba(0,0,0,0) 100%);
 		pointer-events: none;
 		z-index: 1;
 	}
@@ -1935,7 +1935,7 @@ LAYERS
 	bottom: 15px;
 	background: #114466;
 	border-top: 4px solid #57AADD;
-	padding: 50px 24px 32px 24px;
+	padding: 42px 24px 32px 24px;
 	pointer-events: none;
 	transition: all 0.5s ease-in-out;
 	z-index: 100;
@@ -1960,7 +1960,7 @@ LAYERS
 		font-family: 'Montserrat';
 		font-weight: 700;
 		color: $white;
-		font-size: 16px;
+		font-size: 18px;
 		margin-bottom: 18px;
 	}
 

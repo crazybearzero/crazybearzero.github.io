@@ -41,16 +41,17 @@ $(document).ready( function() {
     $(".shibaski").each(function() {
       if(adTest == false) {
         if (isScrolledIntoView($(this))) {
+          console.log('test');
           $('.layer__ad').addClass("-adshow");
+          adTest = true;
         }
-        adTest = true;
+        
       }
     });
 
     $(".sixth .phone").each(function() {
       if(audioTest == false) {
-        if (isScrolledIntoView($(this))) {     
-          console.log('test');   
+        if (isScrolledIntoView($(this))) {      
           var audio = new Audio('./img/ktalk.mp3');
           audio.play();
           audioTest = true;
